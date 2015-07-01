@@ -1,0 +1,18 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+  @if $vendors {
+    @each $vendor in $vendors {
+      #{"-" + $vendor + "-" + $property}: #{$value};
+    }
+  }
+  #{$property}: #{$value};
+}
+
+@mixin bg-cover($url){
+  background: url($url) no-repeat center center fixed;
+  @include prefix(background-size, cover, webkit moz ms o);
+}
