@@ -1,0 +1,24 @@
+.about-container{
+	ul{
+		list-style: none;
+		padding-left: 0;
+
+		li{
+			color: $light;
+			text-align: center;
+			font-size: 22px;
+			line-height: 48px;
+			font-family: $helvetica-n-l;
+			//font-style: italic;
+		}
+	}
+}
+
+.work-detail{
+	.services{
+		ul{
+    		list-style: none;
+    		padding-left: 0px;
+		}
+	}
+}

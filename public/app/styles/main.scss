@@ -1,0 +1,29 @@
+//base, modules, mixins, variables
+@import "bootstrap";
+@import "partials/base";
+
+//layout
+@import "layout/footer";
+@import "layout/header";
+@import "layout/general";
+@import "layout/navbar";
+@import "layout/section";
+@import "layout/portfolio-grid";
+
+//partials
+@import "partials/buttons";
+@import "partials/cards";
+@import "partials/forms";
+@import "partials/typography";
+@import "partials/icons";
+@import "partials/images";
+@import "partials/quote";
+@import "partials/animations";
+@import "partials/links";
+@import "partials/lists";
+@import "partials/badges";
+@import "partials/filters";
+@import "partials/columns";
+
+//css stylesheet to change
+@import "style";

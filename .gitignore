@@ -1,0 +1,6 @@
+### Sass ###
+.sass-cache
+*.css.map
+
+## Directory-based project format:
+.idea/

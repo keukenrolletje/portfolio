@@ -1,0 +1,131 @@
+.main-grid{
+	height: 50vw;
+	width: 100%;
+}
+
+.img-1{
+	@include size(50%, 50vw);
+	display: inline-block;
+	float: left;
+}
+
+.img-2, .img-3{
+	@include size(25%, 25vw);
+	float: left;
+}
+
+figure{
+	overflow: hidden;
+	position: relative;
+
+
+
+	&:hover{
+		h4, h6{
+			opacity: 1;
+			color: $light;
+		}
+
+		.line{
+			opacity: 1;
+			background-color: $light;
+		}
+
+		p{
+			opacity: 1;
+		}
+
+		figcaption::before{
+			opacity: 0.7;
+			
+		}
+	}
+
+	figcaption{
+		padding: 0;
+		backface-visibility: hidden;
+	    position: absolute;
+	    left: 0px;
+	    width: 100%;
+	    height: 100%;
+
+		&::before{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $gradient-start;
+			content: '';
+			opacity: 0;
+		}
+
+		&::before, p{
+			transition: opacity 0.35s;
+		}
+
+		h4, h6{
+			opacity: 0;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			color: #484c61;
+			transition: color 0.35s;
+		}
+
+		p{
+			text-align: center;
+			margin-top: 2.2em; 
+			padding: 2em;
+			width: 100%;
+			opacity: 0;
+		}
+
+		.line{
+			opacity: 0;
+			transition: opacity 0.35s, background-color 0.35s;
+		}
+
+		.line-left, .line-right{
+			top: 40px;
+		}
+
+		.company-heading{
+			width: 75%;
+			height: 10%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left:0;
+		    right:0;
+		    margin: auto;
+		}
+
+	}
+}
+
+.figure-small{
+	.line{
+		width: 12%;
+	}
+
+	.line-left, .line-right{
+		top: 30px;
+	}
+
+	p{
+		margin-top: 1.5em;
+	}
+
+	.company-heading{
+		height: 15%;
+	}
+}
+
+
+.work-detail{
+	img{
+		float: left;
+		@include size(50%, 50vw);
+	}
+}

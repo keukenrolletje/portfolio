@@ -1,0 +1,72 @@
+/*global extends*/
+/*center element - requires width or max-width to be set*/
+%center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*global styles*/
+html{
+  height: 100%;
+}
+
+html{
+  font-size: 17px;
+}
+
+body {
+  margin: 0px;
+  @extend html;
+}
+
+.container-fluid{
+	padding: 0;
+}
+
+.container-sm{
+	width: 500px;
+	padding: 50px 0;
+	@include center-block();
+}
+
+.container-sm-2{
+	@extend .container-sm;
+	width: 600px;
+}
+
+.line{
+	background-color: $sea-green;
+	height: 1px;
+	width: 100px;
+	//set position relative to parent element it needs to be related to
+	position: absolute;
+}
+
+.line-left{
+	left: 0;
+	top: 35px;
+}
+
+.line-right{
+	bottom: 30px;
+	right: 0;
+}
+
+.main-grid{
+	.grid{
+		float: left;
+	}
+}
+
+.about-container{
+	position: relative;
+	z-index: 0;
+}
+
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
+}

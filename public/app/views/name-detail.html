@@ -1,0 +1,37 @@
+
+<h1>{{thing.name}}</h1>
+
+<button ng-click="hello(thing.name)">Hello</button>
+
+<p>{{thing.description}}</p>
+
+<div class="name-images">
+<img ng-src="{{img}}" class="name" ng-repeat="img in thing.images" ng-class="{active:mainImgUrl==img}">
+</div>
+
+<ul class="name-thumbs">
+  <li ng-repeat="img in thing.images">
+    <img ng-src="{{img}}" class="thumbnail" ng-mouseenter="setImage(img)">
+  </li>
+</ul>
+
+<ul class="specs">
+  <li>
+    <span>Children and family</span>
+    <dl>
+      <dt>children</dt>
+      <dd ng-repeat="children in thing.children">{{children}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Job</span>
+    <dd>{{thing.job}}</dd>
+  </li>
+</ul>
+
+<dl>
+  <dt>Piercings</dt>
+  <dd>{{thing.additionalFeatures.piercings | checkmark}}</dd>
+  <dt>Tattoos</dt>
+  <dd>{{thing.additionalFeatures.tattoos | checkmark}}</dd>
+</dl>

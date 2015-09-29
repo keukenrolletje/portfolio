@@ -1,0 +1,70 @@
+.work{
+	position: relative;
+
+	img{
+		@include size(50%, 50vw);
+		display: inline-block;
+	}
+
+	.description-card{
+		@include size(50%, 20vw);
+		background-color: $darkest;
+		position: relative;
+		margin-top: 16%;
+		z-index: 1;
+		box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.44);
+
+		h4{
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+
+		p{
+			padding-top: 0px;
+		}
+
+
+		hr{
+			margin: -10px 100px 20px 0px;.
+			background: -moz-linear-gradient(left, $gradient-start 0%, $gradient-stop 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,$gradient-start), color-stop(100%,$gradient-stop)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(left, $gradient-start 0%,$gradient-stop 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(left, $gradient-start 0%, $gradient-stop 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(left, $gradient-start 0%, $gradient-stop 100%); /* IE10+ */
+			background: linear-gradient(to right, $gradient-start 0%, $gradient-stop 100%); /* W3C */
+			border: none;
+			height: 1px;
+		} 
+
+		.description-inner{
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 65%;
+		    display: block;
+		    margin: 0 auto;
+		}
+	}
+}
+
+.work-left{
+	img{
+		float: left;
+	}
+
+	.description-card{
+		float: left;
+		left: -80px;
+	}
+}
+
+.work-right{
+	img{
+		float: right;
+	}
+
+	.description-card{
+		float: right;
+		right: -80px;
+	}
+}

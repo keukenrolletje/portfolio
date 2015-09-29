@@ -1,0 +1,16 @@
+/*import fonts*/
+@include font-face("Simplifica", font-files("../../fonts/simplifica.ttf"));
+@include font-face("Helvetica Neue", font-files("../../fonts/HelveticaNeue.ttf"));
+//@include font-face("Helvetica Neue light", font-files("../../fonts/HelveticaNeue-Light.otf"));
+
+$simplifica: "Simplifica";
+
+//font stacks
+$roboto: "Roboto", sans-serif;
+$helvetica-n: "Helvetica Neue", "Open Sans", Arial, sans-serif;
+$helvetica-n-l: "HelveticaNeue-Light", "Helvetica Neue Light", 'Open Sans', Arial, "Lucida Grande", sans-serif; 
+$helvetica-n-ul: "HelveticaNeueUltraLight", "HelveticaNeue-Ultra-Light", "Helvetica Neue Ultra Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+$helv-heavy: "HelveticaNeueHeavy", "HelveticaNeue-Heavy", "Helvetica Neue Heavy", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', serif; 
+$helvetica-cb: "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Arial Narrow", "Arial", sans-serif;
+$open-sans: "Open Sans", Arial, sans-serif;
+$source: "Source Sans Pro", Arial, sans-serif;

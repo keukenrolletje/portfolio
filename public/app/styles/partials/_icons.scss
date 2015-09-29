@@ -1,0 +1,57 @@
+
+
+.footer-icons{
+	i{
+		padding: 10px;
+		font-size: 22px;
+		transition: transform 0.35s;
+		-webkit-font-smoothing: antialiased;
+
+		&:hover{
+			color: $gradient-start;
+			transform: rotate(20deg) scale(1.2);
+		}
+	}
+
+
+	a{
+		color: $light;
+
+	}
+
+	.col-md-12:first-child{
+		.fa{
+			padding-top: 3px; 
+		}
+	}
+}
+
+.about{
+	.icon{
+		height: 100px;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 110px;
+
+		.fa{
+			font-size: 30px;
+			color: $light;
+		}
+	}
+}
+
+.icon-fa{
+	background-color: $facebook;
+}
+
+.icon-tw{
+	background-color: $twitter;
+}
+
+.icon-li{
+	background-color: $linkedin;
+}
+
+.icon-pi{
+	background-color: $pinterest;
+}

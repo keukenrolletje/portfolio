@@ -1,0 +1,30 @@
+.badge-job{
+	z-index: 1;
+	@include size(170px);
+	background-color: $darkest;
+	@include prefix(border-radius, 50%, webkit moz o ms);
+	border: 10px solid $gradient-start;
+	box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.5);
+
+	p{
+		color: $gradient-start;
+		font-family: $helvetica-cb;
+		font-weight: 800;
+		font-stretch: condensed;
+		font-size: 24px;
+		text-transform: uppercase;
+		padding: 38px 10px 10px 10px;
+	}
+
+	span{
+		font-size: 36px;
+	}
+}
+
+.job-position{
+	position: absolute;
+	//z-index: 1;
+	right: 29.3%;
+	top: 60vh;
+	transform: rotate(10deg);
+} 

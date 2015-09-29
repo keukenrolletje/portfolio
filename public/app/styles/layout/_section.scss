@@ -1,0 +1,101 @@
+.smoky-section{
+	background-color: $light;
+}
+
+section{
+	h3, p{
+		text-align: center;
+		margin-top: 0;
+	}
+
+	p{
+		padding-top: 15px;
+	}
+
+	.description, .skills-list{ 
+		padding: 80px 100px;
+
+		p{
+			text-align: left;
+		}
+	}
+
+	.skills-list{
+		background: $darkest;
+			    /*linear-gradient(
+			      rgba(52, 143, 80, 0.95), 
+			      rgba(52, 143, 80, 0.95)
+			    ), image-url('work.jpg');*/
+		  overflow: hidden;
+		  background-repeat: no-repeat;
+		  background-position: center; 
+		  background-size: cover;
+		  padding-bottom: 40px;
+	}
+
+	.skills{
+		padding-left: 0;
+		 padding-right: 0;
+	}
+}
+
+.main-heading{
+	position: relative;
+}
+
+.about{
+	section{
+		.row{
+		    overflow: hidden; 
+		}
+
+		.description, .skills{
+		    margin-bottom: -99999px;
+		    padding-bottom: 99999px;
+		}
+	}
+}
+
+.portfolio{
+	section{
+		  position: relative;
+		  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+		  display: -ms-flexbox;      /* TWEENER - IE 10 */
+		  display: -webkit-flex;     /* NEW - Chrome */
+		  display: flex; 
+	}
+}
+
+.services{
+	//padding: 100px 100px 0px 100px;
+	padding-top: 100px;
+
+	.service{
+		h5{
+			top: -50px;
+    		position: relative;
+		}
+	}
+
+	.service-part{
+		margin-bottom: 50px;
+	}
+}
+
+.work-detail{
+	.white-section{
+		.col-md-6:nth-child(2){
+			//padding-left: 30px;
+		}
+
+		.col-md-6:nth-child(1){
+			//padding-right: 30px;
+		}
+	}
+
+	.website{
+		text-align: center;
+		padding: 20px 0px 100px 0px;
+	}
+}

@@ -1,0 +1,53 @@
+.work-filter{
+	background-color: $gradient-start;
+	height: 60px;
+	line-height: 60px;
+	padding-right: 15px;
+	z-index: 1;
+    position: relative;
+
+	[class*="col-"]{
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	a{
+		color: $light;
+		text-decoration: none;
+		text-align: center;
+		font-size: 18px;
+		font-family: $helvetica-n;
+		text-transform: uppercase;
+		position: relative;
+
+		&:hover, &:active, &.active{
+			color: $darkest;
+
+			&:before, &:after{
+				content: "";
+				width: 35px;
+				height: 1px;
+				background-color: $darkest;
+				top: -6px;
+				margin: 0 10px;
+    			position: relative;
+				/*before and after are display inline, so width and height won't show*/
+				display: inline-block;
+			}
+
+			span{
+				position: absolute;
+				width: 0; 
+				height: 0; 
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;	
+				border-top: 12px solid $gradient-start;
+				top: 40px;
+				margin-left: auto;
+				margin-right: auto;
+				left: 0;
+				right: 0;
+			}
+		}
+	}
+}

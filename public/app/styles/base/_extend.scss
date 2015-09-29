@@ -1,0 +1,23 @@
+
+/*Extend for text gradient with possiblity to add textshadow in pseudo element (:after)*/
+%text-gradient{
+    //test vw in IE and IOS safari
+    //test background-clip in all other browser because maybe only supported in webkit - can use color: #fff as fallback!
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #348f50; // Old browsers
+    @include filter-gradient($gradient-start, $gradient-stop, horizontal); // IE6-9
+    @include background-image(linear-gradient(left, $gradient-start -20%,$gradient-stop 100%));
+    //fallback 
+    color: $gradient-start;
+
+    &:after{
+        background: none;
+        content: attr(data-text);
+        left: 0;
+        top: 0;
+        position: absolute;
+        //Put text shadow behind text
+        z-index: -1;
+    }
+}

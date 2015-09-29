@@ -1,0 +1,16 @@
+[
+      {
+        "id": "work1",
+        "imageUrl": "images/masked-woman.jpg",
+        "name": "Company Name 1",
+        "description": "html, css3, laravel, photoshop",
+        "tag": "work"      
+      },
+      {
+        "id": "work2",
+        "imageUrl": "images/camera.jpg",
+        "name": "Company Name 2",
+        "description": "svg, gsap, javascript, jquery",
+        "tag": "experiment"
+      }
+]

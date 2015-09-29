@@ -1,0 +1,17 @@
+footer{
+  background-color: $darkest;
+  color: $light;
+  width: 100%;
+  display: inline-block;
+
+  .container{
+    padding: 100px 15px;
+
+  }
+
+  .copyright{
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+

@@ -1,0 +1,38 @@
+.main-grid{
+	.see-more{
+		@include size(50%, 25vw);
+		background-color: $darkest;
+
+		p{
+			font-family: $helvetica-n-l;
+			color: $light;
+			font-size: 45px;
+			text-transform: uppercase;
+			text-align: center;
+			position: relative;
+  			top: 50%;
+  			transform: translateY(-50%);
+		}
+
+		&:hover p{
+			@extend %text-gradient;
+		}
+	}
+}
+
+.ghost-button{	
+	@include border-gradient($gradient-start, $gradient-stop, 0px);
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 5px 50px;
+	font-family: $simplifica;
+	font-size: 52px;
+
+	a{
+		@extend %text-gradient;
+	}
+
+	&:hover{
+		background-color: $darkest;
+	}
+}

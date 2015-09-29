@@ -1,0 +1,31 @@
+blockquote {
+  margin: 2.5em 10px;
+  padding: 0.5em 10px;
+  border-left: 0px;
+  quotes: "\201C""\201D""\2018""\2019";
+  position: relative;
+  text-align: center;
+  
+
+  p{
+    display: inline; 
+    @extend %text-gradient;
+  }
+
+  //seperate extends to get prettier gradient on cite
+  cite {
+    @extend %text-gradient;
+  }
+
+  &:before {
+
+  line-height: 0.1;
+  color: $gradient-start;
+  content: open-quote;
+  margin-right: 0.1em;
+  vertical-align: -0.3em;
+  //To center text completly
+  margin-left: -37px;
+  }
+}
+

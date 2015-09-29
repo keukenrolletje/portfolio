@@ -1,0 +1,124 @@
+h3{
+	color: $sea-green;
+	font-family: $open-sans;
+	font-weight:700; 
+	font-size: 60px;
+	transform: skewX(165deg);
+}
+
+h4{
+	color: $light;
+	font-family: $simplifica;
+	font-weight: 100;
+	font-size: 56px;
+}
+
+h5{
+	@extend h3;
+	font-size: 30px;
+	margin: 0;
+}
+
+h6{
+	@extend h4;
+	font-size: 35px;
+}
+
+.smoky-section{
+	p{
+		font-family: $open-sans;
+		font-size: 24px;
+		font-weight: 100;
+		    line-height: 30px;
+	}
+}
+
+blockquote{
+	p{
+		font-family: $simplifica;
+		font-size: 100px;
+		text-transform: uppercase;
+		font-style: italic;
+	}
+
+	cite{
+		font-family: $helvetica-n;
+		font-size: 24px;
+		font-style: normal;
+		text-transform: uppercase;
+	}
+
+	 &:before {
+	  font-family: $simplifica;
+	  font-size: 200px;
+	  font-style: italic;
+	  }
+}
+
+footer{
+	p, .copyright{
+		font-family: $open-sans;
+		font-weight: 100;
+	}
+
+	.copyright{
+		font-size: 13px;
+	}
+}
+
+figure{
+	p{
+		color: $light;
+		font-size: 18px;
+		font-family: $helvetica-n;
+	}
+}
+
+.figure-small{
+	p{
+		font-size: 14px;
+	}
+}
+
+
+
+.skills{
+	h3{
+		color: $light;
+		font-size: 24px;
+		padding-top: 15px;
+	}
+}
+
+.portfolio{
+	h3{
+		text-align: center;
+		font-size: 100px; 
+	}
+
+	h4{
+		font-size: 72px;
+		@extend %text-gradient;
+	}
+
+	p{
+		color: $light;
+		font-family: $helvetica-n-l;
+		font-size: 22px;
+		text-align: left;
+	}
+}
+
+.work-detail{
+	h5{
+		font-size: 24px;
+		display: inline-block;
+	}
+
+	.services{
+		p, ul{
+			display: inline-block;
+			margin-left: 50px;
+		}
+	}
+}

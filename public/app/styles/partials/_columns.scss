@@ -1,0 +1,11 @@
+.column{
+	@include prefix("column-count", "2", ms moz webkit o);
+	@include prefix("column-width", "300px", ms moz webkit o);
+	@include prefix("column-gap", "4em", ms moz webkit o);
+	margin: 100px;
+
+	p{
+		padding-top: 0px;
+		text-align: left;
+	}
+}
