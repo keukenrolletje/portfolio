@@ -9,11 +9,11 @@
  */
 
  var App = angular.module('publicApp');
-App.controller('MainCtrl', [ '$scope', '$http', function ($scope, $http) {
+App.controller('quotesCtrl', [ '$scope', '$http', function ($scope, $http) {
 
-  $http.get('portfolio/work.json')
+  $http.get('portfolio/quotes.json')
        .then(function(res){
-          $scope.grid = res.data;
-          $scope.grid = res.data.splice(0, 3);       
+          var quotes = res.data;
+          $scope.quote = quotes[Math.floor(Math.random()*quotes.length)];
         });
   }]);

@@ -55,3 +55,51 @@
 .icon-pi{
 	background-color: $pinterest;
 }
+
+	.icons{
+		margin-top: 50px;
+
+		.fa{
+			font-size: 20px;	
+			@extend %text-gradient;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			line-height: 50px;
+			text-align: center;
+		}
+
+		a{
+			margin-right: 25px;
+			@include border-gradient($gradient-start, $gradient-stop, 0px);
+			border-radius: 50%;
+			display: inline-block;
+			height: 50px;
+			width: 50px;
+			transition: all 0.35s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+			background-size: 200% 100%;
+    		background-image: linear-gradient(to right, $light 50%, $darkest 50%);
+
+			&:hover{
+				//background-color: $darkest;
+				box-shadow: none;
+				transform: rotate(20deg);
+				 background-position: -100% 0%;
+			}
+		}
+	}
+
+
+.about{
+	.icons{
+		a{
+			background-image: linear-gradient(to right, $darkest 50%, $light 50%);
+		}
+	}
+}
+
+.info-i{
+	margin-right: 20px;
+	color: lighten($darkest, 15%);
+	font-size: 15px;
+}

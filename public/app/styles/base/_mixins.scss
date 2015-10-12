@@ -44,3 +44,20 @@
               1px 1px 0 $weight rgba($to, .75),
               -1px -1px 0 $weight rgba($from, .75);
 }
+
+/*Mixin for viewport unit fallbacks*/
+/*Width and height for screensizes*/
+@mixin vu($property, $unit, $width){
+    // Store $input unit 
+  $u: unit($unit);
+  // Remove unit from $input and convert to ratio
+  $ratio: $unit / ($unit * 0 + 1) / 100;
+  // Calc and store return values
+  $widthVal: floor($width * $ratio);
+  
+  @if $u == vw { 
+    #{$property}: #{$widthVal};
+  }
+
+  #{$property}: #{$unit};
+}

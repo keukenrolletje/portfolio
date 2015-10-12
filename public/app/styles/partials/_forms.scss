@@ -1,0 +1,35 @@
+form{
+	text-align: center;
+
+	input, textarea{
+		border: 0px; 
+		background-color: transparent;
+		border-bottom: 1px solid $darkest;
+		width: 80%;
+
+		&:focus{
+			border: 0px;
+			border-bottom: 1px solid $gradient-start;
+			outline: 0px;
+			color: $gradient-start;
+		}
+	}
+
+	input:-webkit-autofill {
+       -webkit-box-shadow: 0 0 0px 1000px $light inset;
+	}
+
+	label{
+		font-family: $open-sans;
+		font-size: 18px;
+		font-weight: 400;
+		text-transform: uppercase;
+		padding-top: 0px;
+	}
+
+	.ghost-button{
+		font-size: 24px;
+		font-family: $open-sans;
+		margin-top: 15px;
+	}
+}

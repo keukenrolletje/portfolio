@@ -35,13 +35,25 @@
 	.full-menu{
 		
   		width: 100vw;
+  		max-width:100%;
   		
   		background-color: $darkest;
+
+  		.bg-part{
+			width: 12.5%;
+			position: absolute;
+	    	top: 0vh;
+	    	display: inline-block;
+	    	background-color: $darkest;
+	    	z-index: 100;
+		}
 
 
   		ul{
   			margin-top: -10px;
   			padding-left: 0;
+  			z-index: 200;
+  			position: relative;
 
   			li{
   				
@@ -71,12 +83,7 @@
   		margin-top: -1px;
 		position: fixed;
 		z-index: 1000;
-	}
-
-	.full-menu.menu-closed{
-		.full-page, ul{
-			height: 0vh;
-		}
+		
 	}
 
 }

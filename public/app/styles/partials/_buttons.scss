@@ -27,6 +27,9 @@
 	padding: 5px 50px;
 	font-family: $simplifica;
 	font-size: 52px;
+	transition: all 0.35s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+	background-size: 200% 100%;
+    background-image: linear-gradient(to right, $light 50%, $darkest 50%);
 
 	a{
 		@extend %text-gradient;
@@ -34,5 +37,12 @@
 
 	&:hover{
 		background-color: $darkest;
+		box-shadow: none;
+		background-position: -100% 0%;
 	}
+}
+
+.ghost-button-white{
+	@extend .ghost-button;
+	background-image: linear-gradient(to right, $lightest 50%, $darkest 50%);
 }

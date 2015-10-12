@@ -1,47 +1,71 @@
-<div ng-controller="AboutCtrl" class="about">
-	
-	<header class="about-header">
-	  <h1 data-text="About">About</h1>
-	  <h6 data-text="Behind the scenes">Behind the scenes</h6>
-	</header>
+<section ng-controller="AboutCtrl" class="about container-fluid">
+	<header></header>
+	<img src="../images/joke3.jpg" class="img-1">
+	<div class="description">
+		<div class="inner">	
+			    <p class="highlight large">Hi,</p>
+				<p>Clara Rua, 20y/o, I’m currently a 3rd year <span class="highlight">student</span> involved in HETIC, an IT school based in 				Paris. I blossom everyday, in mastering my skills as a designer, creative thinker and web child in general. </p>
+				<p>I’m an eager-to-learn person, in life as in my work, lead by an <span class="highlight">insatiable curiosity</span>, sometimes driven by some crazy ideas. I believe there is always a way, whether classical or eccentric, in freedom as in restrictions, to bring more <span class="highlight">comfort</span>, pleasure and satisfaction to the user, both in regard to the substance and the form of any project.</p>
+				<div class="icons">
+					<a href=""><i class="fa fa-twitter"></i></a>
+					<a href=""><i class="fa fa-pinterest"></i></a>
+					<a href=""><i class="fa fa-facebook"></i></a>
+					<a href=""><i class="fa fa-linkedin"></i></a>
+				</div>
+		</div>
+	</div>
+</section>
 
 	  <div class="job-position" ng-class="{'hidden': open, 'badge badge-job': !open}">
 		<p><span>Job</span><br>wanted!</p>
 	  </div>
 
-	<section class="container-fluid about-container">
+<section class="smoky-section about">
+	<div class="container">
 		<div class="row">
-			<div class="col-md-8 description smoky-section"> 
-				<p>Clara Rua, 20y/o, I’m currently a 3rd year student involved in HETIC, an IT school based in Paris. I blossom everyday, in mastering my skills as a designer, creative thinker and web child in general. </p>
-				<p>I’m an eager-to-learn person, in life as in my work, lead by an insatiable curiosity, sometimes driven by some crazy ideas. I believe there is always a way, whether classical or eccentric, in freedom as in restrictions, to bring more comfort, pleasure and satisfaction to the user, both in regard to the substance and the form of any project.</p>
-			</div>
-			<div class="col-md-4 skills">
-				<div class="col-md-12 skills-list">
-					<h3>Skills</h3>
+			<div class="col-sm-6 col-xs-12 skills">
+				<h5>Key skills</h5>
+				<div class="col-sm-4">
 					<ul>
-						<li>HTML(5) / CSS3</li>
-						<li>JS / JQuery</li>
-						<li>GSAP / SVG</li>
-						<li>PHP / laravel</li>
-						<li>Photoshop</li>
-						<li>Illustrator</li>
+						<li>HTML</li>
+						<li>CSS3</li>
+						<li>Sass</li>
 					</ul>
 				</div>
-				<div class="col-md-3 icon icon-fa"><i class="fa fa-facebook"></i></div>
-				<div class="col-md-3 icon icon-tw"><i class="fa fa-twitter"></i></div>
-				<div class="col-md-3 icon icon-li"><i class="fa fa-linkedin"></i></div>
-				<div class="col-md-3 icon icon-pi"><i class="fa fa-pinterest"></i></div>
+				<div class="col-sm-8">
+					<ul>
+						<li>PHP - laravel</li>
+						<li>jquery</li>
+						<li>javascript</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-6 col-xs-12 skills">
+				<h5>Additional skills</h5>
+				<div class="col-sm-6">
+					<ul>
+						<li>Photoshop</li>
+						<li>Illustrator</li>
+						<li>AngularJS</li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<ul>
+						<li>Git</li>
+						<li>Bootstrap</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
-	<div class="white-section">
+<div class="white-section about-website">
 	<section class="container">
-		<blockquote>
-			<p>Design is how it works</p><br>
-			<!--cite handwritten svg? -->
-			<cite>- Steve Jobs -</cite>
-		</blockquote>
+		<h5>About this website</h5>
+		<p>This site has been designed and built by hand from the ground up. It's handled through AngularJS and animated with the fantastic GreenSock Animation Platform.</p>
+		<p>
+		The CSS is written in Sass, with a <span class="highlight">mobile first approach</span> and this modular scale for a more meaningful typography.
+		</p>
 	</section>
-</div>
 </div>

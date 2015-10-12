@@ -2,7 +2,7 @@ h3{
 	color: $sea-green;
 	font-family: $open-sans;
 	font-weight:700; 
-	font-size: 60px;
+	@include vu(font-size, 4.7vw, $screen-xs-max);
 	transform: skewX(165deg);
 }
 
@@ -36,7 +36,7 @@ h6{
 blockquote{
 	p{
 		font-family: $simplifica;
-		font-size: 100px;
+		@include vu(font-size, 7.8vw, $screen-lg-min);
 		text-transform: uppercase;
 		font-style: italic;
 	}
@@ -80,31 +80,57 @@ figure{
 	}
 }
 
+.about, .about-website{
+	.large{
+		font-family: $simplifica;
+		@include vu(font-size, 7vw, $screen-md-min);
+    	@include vu(line-height, 6vw, $screen-md-min);
+	}
+
+	p{
+		font-family: $open-sans;
+		@include vu(font-size, 1.4vw, $screen-md-min);
+		font-weight: 100;
+	}
+}
 
 
-.skills{
-	h3{
+.about{
+	p{
 		color: $light;
-		font-size: 24px;
-		padding-top: 15px;
+	}
+
+	h5{
+		text-align: left;
+	}
+}
+
+.about-website{
+	p{
+		color: $darkest;
+	}
+
+	h5{
+		margin-bottom: 30px;
 	}
 }
 
 .portfolio{
 	h3{
 		text-align: center;
-		font-size: 100px; 
+		@include vu(font-size, 9vw, $screen-md-min);
+
 	}
 
 	h4{
-		font-size: 72px;
+		@include vu(font-size, 5.3vw, $screen-md-min);
 		@extend %text-gradient;
 	}
 
 	p{
 		color: $light;
 		font-family: $helvetica-n-l;
-		font-size: 22px;
+		@include vu(font-size, 1.5vw, $screen-md-min);
 		text-align: left;
 	}
 }
@@ -121,4 +147,22 @@ figure{
 			margin-left: 50px;
 		}
 	}
+}
+
+.contact-page{
+	h3{
+		@include vu(font-size, 4.3vw, $screen-md-min);
+		padding-top: 100px;
+		margin-bottom: 80px;
+	}
+
+	p{
+		color: $darkest;
+	}
+}
+
+.highlight{
+	@extend %text-gradient;
+	font-weight: 600;
+	white-space: nowrap;
 }

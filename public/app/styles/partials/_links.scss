@@ -1,0 +1,12 @@
+.contact-page{
+	a[href^="mailto:"]{
+		font-size: 24px;
+		color: $gradient-start;
+		font-weight: 100;
+		font-family: $open-sans;
+
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}

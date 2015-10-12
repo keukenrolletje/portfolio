@@ -6,7 +6,7 @@
 	<div class="work-filter">
 			<div class="row">
 				
-				<div class="col-md-4" ng-repeat="tag in tags" >
+				<div class="col-xs-4" ng-repeat="tag in tags" >
 					<a ng-click="filters.tag = tag.tag; itemClicked($index)" ng-class="{ 'active': $index == selectedIndex }"><span></span>{{tag.name}}</a>
 				</div>
 			</div>

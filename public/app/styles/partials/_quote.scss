@@ -8,6 +8,7 @@ blockquote {
   
 
   p{
+    padding-right: 10px;
     display: inline; 
     @extend %text-gradient;
   }

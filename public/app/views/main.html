@@ -5,9 +5,7 @@
 <div class="smoky-section">
 	<section class="container-sm">
 		<div class="main-heading">
-			<div class="line line-left"></div>
-			<h3>Who I am</h3>
-			<div class="line line-right"></div>
+			<h3 class="line-large-green">Who I am</h3>
 		</div>
 		<p>Hello internet, my name is Joke Gysen.
 			I’m a 20-something year old, born and raised in 
@@ -18,47 +16,39 @@
 <div class="white-section">
 	<section class="container-sm-2">
 		<div class="main-heading">
-			<div class="line line-left"></div>
-			<h3>Recent work</h3>
-			<div class="line line-right"></div>
+			<h3 class="line-large-green">Recent work</h3>
 		</div>
 	</section>
-	<div class="main-grid">
-		<a href="#">
-			<figure class="img-1">
-				<img src="../images/masked-woman.jpg" class="grid">
+	<div class="main-grid" ng-controller="MainCtrl">
+
+		<!-- add ng-if for class names? inside ng-repeat? -->
+		<a href="#"  ng-repeat="work in grid">
+			<figure ng-if="work.id == 'work1'" class="img-1">
+				<img  ng-src="{{work.imageUrl}}" class="grid">
 				<figcaption>
 					<div class="company-heading">
-						<div class="line line-left"></div>
-						<h4>Company Name</h4>
-						<div class="line line-right"></div>
-						<p>Redesign</p>
+						<h4 class="line-large-white">{{work.name}}</h4>
+						<p>{{work.description}}</p>
 					</div>
 				</figcaption>
 			</figure>
-		</a>
-		<a href="#">
-			<figure class="img-2 figure-small">
-				<img src="../images/camera.jpg" class="grid">
+
+			<figure ng-if="work.id == 'work2'" class="img-2 figure-small">
+				<img  ng-src="{{work.imageUrl}}" class="grid">
 				<figcaption>
 					<div class="company-heading">
-						<div class="line line-left"></div>
-						<h6>Company Name</h6>
-						<div class="line line-right"></div>
-						<p>Redesign</p>
+						<h6 class="line-small-white">{{work.name}}</h6>
+						<p>{{work.description}}</p>
 					</div>
 				</figcaption>
 			</figure>
-		</a>
-		<a href="#">
-			<figure class="img-3 figure-small">
-				<img src="../images/london.jpg" class="grid">
+
+			<figure ng-if="work.id == 'work3'" class="img-3 figure-small">
+				<img  ng-src="{{work.imageUrl}}" class="grid">
 				<figcaption>
 					<div class="company-heading">
-						<div class="line line-left"></div>
-						<h6>Company Name</h6>
-						<div class="line line-right"></div>
-						<p>Redesign</p>
+						<h6 class="line-small-white">{{work.name}}</h6>
+						<p>{{work.description}}</p>
 					</div>
 				</figcaption>
 			</figure>
@@ -66,10 +56,10 @@
 		<a href="#"><div class="grid see-more"><p>See all projects</p></div></a>
 	</div>
 </div>
-<div class="white-section">
+<div class="white-section" ng-controller="quotesCtrl">
 	<section class="container">
 		<blockquote>
-			<p>Design is how it works</p><br>
+			<p>{{quote}}</p><br>
 			<!--cite handwritten svg? -->
 			<cite>- Steve Jobs -</cite>
 		</blockquote>

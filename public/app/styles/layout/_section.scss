@@ -22,10 +22,6 @@ section{
 
 	.skills-list{
 		background: $darkest;
-			    /*linear-gradient(
-			      rgba(52, 143, 80, 0.95), 
-			      rgba(52, 143, 80, 0.95)
-			    ), image-url('work.jpg');*/
 		  overflow: hidden;
 		  background-repeat: no-repeat;
 		  background-position: center; 
@@ -44,17 +40,43 @@ section{
 }
 
 .about{
-	section{
-		.row{
-		    overflow: hidden; 
-		}
+	.description{
+		background-color: $darkest;
+		color: $light;
+		height: 50vw;
+		width: 50%;
+		float: left;
+		padding: 5% 7%;
+		display: flex;
+  		justify-content: center;
+  		text-align: center;
 
-		.description, .skills{
-		    margin-bottom: -99999px;
-		    padding-bottom: 99999px;
+  		.inner{
+  			align-self: center;
+  		}
+	}
+
+	.container{
+		padding-top: 60px;
+		padding-bottom: 60px;
+		width: 55%;
+	}
+
+	.skills{
+		ul{
+			margin-top: 30px;
 		}
 	}
 }
+
+.about-website{
+		padding-top: 60px;
+		padding-bottom: 60px;
+		
+		p{
+			color: $darkest;
+		}
+	}
 
 .portfolio{
 	section{
@@ -97,5 +119,21 @@ section{
 	.website{
 		text-align: center;
 		padding: 20px 0px 100px 0px;
+	}
+}
+
+.contact-page{
+	p{
+		text-align: left;
+		padding-top: 0px;
+	}
+
+	.contact-container{
+		padding-bottom: 100px;
+		width: 65%;
+	}
+
+	.info-text{
+		margin-bottom: 20px;
 	}
 }

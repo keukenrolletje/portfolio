@@ -1,6 +1,5 @@
 .work-filter{
 	background-color: $gradient-start;
-	height: 60px;
 	line-height: 60px;
 	padding-right: 15px;
 	z-index: 1;
@@ -23,18 +22,6 @@
 		&:hover, &:active, &.active{
 			color: $darkest;
 
-			&:before, &:after{
-				content: "";
-				width: 35px;
-				height: 1px;
-				background-color: $darkest;
-				top: -6px;
-				margin: 0 10px;
-    			position: relative;
-				/*before and after are display inline, so width and height won't show*/
-				display: inline-block;
-			}
-
 			span{
 				position: absolute;
 				width: 0; 
@@ -47,6 +34,26 @@
 				margin-right: auto;
 				left: 0;
 				right: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.work-filter{
+		a{
+			&:hover, &:active, &.active{
+				&:before, &:after{
+					content: "";
+					width: 35px;
+					height: 1px;
+					background-color: $darkest;
+					top: -6px;
+					margin: 0 10px;
+	    			position: relative;
+					/*before and after are display inline, so width and height won't show*/
+					display: inline-block;
+				}
 			}
 		}
 	}

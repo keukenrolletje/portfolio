@@ -18,36 +18,13 @@ figure{
 	overflow: hidden;
 	position: relative;
 
-
-
-	&:hover{
-		h4, h6{
-			opacity: 1;
-			color: $light;
-		}
-
-		.line{
-			opacity: 1;
-			background-color: $light;
-		}
-
-		p{
-			opacity: 1;
-		}
-
-		figcaption::before{
-			opacity: 0.7;
-			
-		}
-	}
-
 	figcaption{
 		padding: 0;
 		backface-visibility: hidden;
 	    position: absolute;
 	    left: 0px;
 	    width: 100%;
-	    height: 100%;
+	    height: 100%; 
 
 		&::before{
 			position: absolute;
@@ -61,7 +38,8 @@ figure{
 		}
 
 		&::before, p{
-			transition: opacity 0.35s;
+			opacity: 0;
+			transition: opacity 0.5s;
 		}
 
 		h4, h6{
@@ -70,7 +48,7 @@ figure{
 			text-align: center;
 			width: 100%;
 			color: #484c61;
-			transition: color 0.35s;
+			transition: opacity 0.5s;
 		}
 
 		p{
@@ -81,17 +59,16 @@ figure{
 			opacity: 0;
 		}
 
-		.line{
-			opacity: 0;
-			transition: opacity 0.35s, background-color 0.35s;
-		}
+		.line-large-white, .line-small-white{
+			&:before, &:after{
+						width: 0px;
+						transition: width 0.25s ease-out;
+						transition-delay: 0.3s;
+			}
 
-		.line-left, .line-right{
-			top: 40px;
 		}
 
 		.company-heading{
-			width: 75%;
 			height: 10%;
 			position: absolute;
 			top: 0;
@@ -122,10 +99,22 @@ figure{
 	}
 }
 
+.logo, .work-detail .logo{
+	width: 15vw;
+	height: initial;
+}
 
 .work-detail{
 	img{
 		float: left;
 		@include size(50%, 50vw);
 	}
+
+	.logo{
+		text-align: center;
+		display: inline-block;
+		float: initial;
+		margin: 0 auto;
+	}
 }
+

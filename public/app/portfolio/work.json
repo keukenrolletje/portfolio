@@ -12,5 +12,12 @@
         "name": "Company Name 2",
         "description": "svg, gsap, javascript, jquery",
         "tag": "experiment"
+      },
+      {
+        "id": "work3",
+        "imageUrl": "images/london.jpg",
+        "name": "Company Name 3",
+        "description": "svg, gsap, javascript, jquery",
+        "tag": "experiment"
       }
 ]

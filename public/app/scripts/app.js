@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
 angular
   .module('publicApp', [
     'ngAnimate',
@@ -37,9 +38,13 @@ angular
         templateUrl: 'views/portfolio.html',
         controller: 'workCtrl'
       })
-      .when('/portfolio/:workId', {
+      .when('/portfolio/:id', {
         templateUrl: 'views/workdetail.html',
         controller: 'workdetailCtrl'
+      })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'contactCtrl'
       })
       /*.otherwise({
         redirectTo:'/'

@@ -1,0 +1,40 @@
+.line-before-after{
+	&:before, &:after{
+				content: "";
+				width: 70px;
+				height: 1px;
+				background-color: $gradient-start;
+				vertical-align: middle;
+				margin: 0 15px;
+    			position: relative;
+				/*before and after are display inline, so width and height won't show*/
+				display: inline-block;
+			}
+}
+
+.line-large-white{
+	@extend .line-before-after;
+
+	&:before, &:after{
+		width: 10%;
+		background-color: $light;
+	}
+}
+
+.line-small-white{
+	@extend .line-before-after;
+
+	&:before, &:after{
+		width: 2%;
+		background-color: $light;
+	}
+}
+
+.line-large-green{
+	@extend .line-before-after;
+
+	&:before, &:after{
+		width: 10%;
+		margin: 0 5px;
+	}
+} 

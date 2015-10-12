@@ -1,61 +1,102 @@
 .menu-btn{
-	.burger-top{
-	@include prefix(transition, 0.2s linear all, ms moz o webkit);
-	transform: rotate(0deg) scale(1);
-	}
+  .burger-top{
+  @include prefix(transition, 0.2s linear all, ms moz o webkit);
+  transform: rotate(0deg) scale(1);
+  }
 
-	.burger-middle{
-	@include prefix(transition, 0.1s linear all, ms moz o webkit);
-	opacity: 1;
-	}
+  .burger-middle{
+  @include prefix(transition, 0.1s linear all, ms moz o webkit);
+  opacity: 1;
+  }
 
-	.burger-bottom{
-	@include prefix(transition, 0.2s linear all, ms moz o webkit);
-	transform: rotate(0deg) scale(1);
-	}
+  .burger-bottom{
+  @include prefix(transition, 0.2s linear all, ms moz o webkit);
+  transform: rotate(0deg) scale(1);
+  }
 }
 
 .menu-btn.menu-btn-open{
-	position: fixed;
-	right: 0;
+  position: fixed;
+  right: 0;
 
-	.burger-top{
-		transform: rotate(45deg) scale(1.3);
-		top: 9px;
-	}
+  .burger-top{
+    transform: rotate(45deg) scale(1.3);
+    top: 9px;
+  }
 
-	.burger-middle{
-		opacity: 0;
-	}
+  .burger-middle{
+    opacity: 0;
+  }
 
-	.burger-bottom{
-		transform: rotate(-45deg) scale(1.3);
-		top: 9px;
-	}
+  .burger-bottom{
+    transform: rotate(-45deg) scale(1.3);
+    top: 9px;
+  }
 }
 
 .full-menu {
-  @include prefix(transition, 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) all, ms moz o webkit);
-  @include prefix(transform-origin, top center, ms moz o webkit);
+
   height: 0vh;
 
+  .full-page{
+    transform: translate(0px, -450px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include prefix(transition, 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) transform, ms moz o webkit);
+    transition-delay: 1s;
+  }
+
+  .bg-part{
+    transition: height 0.15s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    height: 0vh;
+  }
+
   ul{
-  	li{
     transform: translate(0px, -450px);
     @include prefix(transition, 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) transform, ms moz o webkit);
-  	}
   }
 }
 
 .full-menu.menu-open {
   height: 100vh;
 
-  	ul li{
-  		transform: translate(0px, 140%);
-  	}
+  .full-page{
+    transform: translate(0px, 0px);
+    height: 100%;
+    transition-delay: 0s;
+  }
+
+  .bg-part{
+        height: 100vh;
+      }
+
+      $count : 0%;
+
+      @for $i from 1 through 8{
+          .bg-part:nth-child(#{$i}){ 
+            left: $count;
+            $count: $count + 12.5%;
+        }
+      } 
+
+    ul{
+       transform: translate(0px, 0px);
+    }
 }
 
 .full-menu.menu-closed{
-	position: absolute;
-	height: 0vh;
+    .bg-part{
+      height: 0vh;
+    }  
+
+      $count : 0%;
+
+      @for $i from 1 through 8{
+          .bg-part:nth-child(#{$i}){ 
+            left: $count;
+            $count: $count + 12.5%;
+            transition-delay: random(9) / 10 +  s;
+        }
+      } 
 }

@@ -1,7 +1,8 @@
-<div ng-controller="wordetailCtrl" class="work-detail">
-	<header class="detail-header">
-		<h1 data-text="Logo">Logo</h1>
-		<h2 data-text="Making it fun and easy to design what you wear">Making it fun and easy to design what you wear</h2>
+<div ng-controller="workdetailCtrl" class="work-detail">
+	<header class="detail-header" ng-style="{'background-image': 'url(' + work.header + ')'}">
+		<img ng-if="work.logo" ng-src="{{work.logo}}" class="logo">
+		<h1 ng-if="!work.logo" data-text="{{work.id}}">{{work.id}}</h1>
+		<h2 data-text="{{work.tagline}}">{{work.tagline}}</h2>
 	</header>
 
 	<section class="smoky-section">
@@ -9,47 +10,44 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="column">
-						<p>As a web developer, your portfolio is an essential piece of your job application. It’s an opportunity to demonstrate a curated selection of your best pieces of work—or maybe your only work if you’re new! If done right, your portfolio will give you a huge advantage amongst a sea of applicants.
-						As a web developer, your portfolio is an essential piece of your job application. It’s an opportunity to demonstrate a curated selection of your best pieces of work—or maybe your only work if you’re new! If done right, your portfolio will give you a huge advantage amongst a sea of applicants.</p>
+						<p>{{work.description}}</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="white-section">
+	<section class="white-section service-container">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 services">
+				<div class="col-sm-6 col-xs-12 services">
 					<div class="service-part">
 						<h5>Role:</h5>
-						<p>Front-end developer</p>
+						<p>{{work.services.role}}</p>
 					</div>
 
 					<div class="service-part service">
 						<h5>What:</h5>
 						<ul>
-							<li>HTML / CSS3</li>
-							<li>Javascript</li>
-							<li>PHP / laravel</li>
+							<li ng-repeat="service in work.services.service">{{service}}</li>
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-6 services">
+				<div class="col-sm-6 col-xs-12 services">
 					<div class="service-part">
 						<h5>With:</h5>
-						<p>Laurent Van Winckel</p>
+						<p>{{work.services.with}}</p>
 					</div>
 
 					<div class="service-part">
 						<h5>When:</h5>
-						<p>September 2015 - Oktober 2015</p>
+						<p>{{work.services.when}}</p>
 					</div>
 				</div>
 
 				<div class="col-md-12 website">
-					<div class="ghost-button">
-						<a href="#">Visit the website</a>
+					<div class="ghost-button-white">
+						<a href="{{work.website}}">Visit the website</a>
 					</div>
 				</div>
 			</div>
@@ -57,18 +55,17 @@
 	</section>
 
 	<section class="container-fluid">
-		<img src="../images/full-screen.jpg">
-		<img src="../images/small-screen.jpg">
+		<img ng-src="{{img}}" ng-repeat="img in work.images">
 	</section>
 
-	<div class="white-section">
-	<section class="container">
-		<blockquote>
-			<p>Design is how it works</p><br>
-			<!--cite handwritten svg? -->
-			<cite>- Steve Jobs -</cite>
-		</blockquote>
-	</section>
-</div>
+	<div class="white-section quote-wrapper">
+		<section class="container">
+			<blockquote>
+				<p>Design is how it works</p><br>
+				<!--cite handwritten svg? -->
+				<cite>- Steve Jobs -</cite>
+			</blockquote>
+		</section>
+	</div>
 
 </div>
