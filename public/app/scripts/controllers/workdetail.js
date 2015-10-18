@@ -8,6 +8,7 @@ App.controller('workdetailCtrl', [ '$scope', '$routeParams', '$http', function (
        .then(function(res){
           $scope.work = res.data;
           //$scope.works = res.data.splice(0, 5);       
+         $rootScope.exp = $scope.work.tag;
         });
 
   }]);

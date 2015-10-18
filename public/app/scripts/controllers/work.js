@@ -1,7 +1,7 @@
 'use strict';
 
 var App = angular.module('publicApp');
-App.controller('workCtrl', [ '$scope', '$routeParams', '$http', function ($scope, $routeParams, $http) {
+App.controller('workCtrl', ['$rootScope', '$scope', '$routeParams', '$http', function ($rootScope, $scope, $routeParams, $http) {
 	$scope.tags = [
 	{
 		"name" : "all",
@@ -12,7 +12,7 @@ App.controller('workCtrl', [ '$scope', '$routeParams', '$http', function ($scope
 		"tag" : "work"
 	},
 	{
-		"name" : "experiment",
+		"name" : "experiments",
 		"tag" : "experiment"
 	}
 	];
@@ -20,7 +20,7 @@ App.controller('workCtrl', [ '$scope', '$routeParams', '$http', function ($scope
 	$http.get('portfolio/work.json')
        .then(function(res){
           $scope.works = res.data;
-          //$scope.works = res.data.splice(0, 5);       
+          //$scope.works = res.data.splice(0, 5);    
         });
 
        $scope.filters = { };
@@ -28,8 +28,31 @@ App.controller('workCtrl', [ '$scope', '$routeParams', '$http', function ($scope
 		$scope.selectedIndex = 0;
   
 		  $scope.itemClicked = function ($index) {
-		    console.log($index);
 		    $scope.selectedIndex = $index;
+
 		  };
 
-  }]);
+		if($rootScope.exp === 'experiment'){
+			$scope.exp = $rootScope.exp;
+			$scope.selectedIndex = 2;
+		}
+		else{
+			$scope.exp = '';
+		}
+
+		    $scope.isdef = function(work){
+			    return (work.tag === 'experiment');
+			};
+
+  }]).directive('reset', ['$document', function($document) {
+  return {
+    restrict: 'A',
+    link: function($rootScope) {
+      $document.on('click', function() {
+        $rootScope.exp = '';
+        /*use apply to tell angular about the change and prevent clicking 2 times to change tag*/
+        $rootScope.$apply();
+      });
+    }
+  };
+}]);
