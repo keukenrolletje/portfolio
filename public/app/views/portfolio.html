@@ -1,18 +1,32 @@
-<div ng-controller="workCtrl" class="portfolio">
+<div reset ng-controller="workCtrl" class="portfolio">
 	<header>
 		<h3>Recent Work</h3>
 	</header>
 
 	<div class="work-filter">
-			<div class="row">
-				
-				<div class="col-xs-4" ng-repeat="tag in tags" >
-					<a ng-click="filters.tag = tag.tag; itemClicked($index)" ng-class="{ 'active': $index == selectedIndex }"><span></span>{{tag.name}}</a>
+			<div class="row">		
+				<div class="col-xs-4" ng-repeat="tag in tags">
+					<a ng-click="filters.tag = tag.tag; itemClicked($index)" ng-class="{ 'active': $index == selectedIndex }" ><span></span>{{tag.name}}</a>
 				</div>
 			</div>
 	</div>
 
-	<section ng-repeat="work in works | filter:filters">
+	<section ng-if="exp =='experiment'" ng-repeat="work in works | filter:isdef" class="tag-animation">
+		<div class="work" ng-class-odd="'work-left'" ng-class-even="'work-right'">
+			<img ng-src="{{work.imageUrl}}">
+			<a href="#/portfolio/{{work.id}}">
+				<div class="description-card">
+					<div class="description-inner">
+						<h4>{{work.name}}</h4>
+						<hr>
+						<p>{{work.description}}</p>
+					</div>
+				</div>
+			</a>	
+		</div>
+	</section>
+
+		<section ng-if="exp ==''" ng-repeat="work in works | filter:filters" class="tag-animation">
 		<div class="work" ng-class-odd="'work-left'" ng-class-even="'work-right'">
 			<img ng-src="{{work.imageUrl}}">
 			<a href="#/portfolio/{{work.id}}">
