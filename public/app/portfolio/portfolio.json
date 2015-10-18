@@ -1,0 +1,27 @@
+{
+	"id": "portfolio",
+	"name": "Portfolio",
+	"tag": "work",
+	"header": "../images/portfolioh.jpg",
+	"logo": "../images/logow.png",
+	"tagline": "",
+	"description": "This was my first portfolio and the second website i ever made. I was also learning responsive design at the moment.",
+	"services": {
+		"role": "front-end developer",
+		"service": [
+		"HTML",
+		"css", 
+		"javascript",
+		"photoshop",
+		"responsive"
+		],
+		"with": "",
+		"client": "",
+		"when": "September 2015 - October 2015",
+		"website": "http://jokegysen.com/index.html"
+	},
+	"images": [
+	"../images/portfoliofull.jpg",
+	"../images/portfoliosmall.jpg"
+	]
+}

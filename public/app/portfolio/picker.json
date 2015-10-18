@@ -1,0 +1,11 @@
+{
+	"id": "picker",
+	"name": "Opening hour picker",
+	"tag": "experiment",
+	"code": "<p data-height=\"510\" data-theme-id=\"4795\" data-slug-hash=\"VLbjMB\" data-default-tab=\"result\" data-user=\"keukenrolletje\" class='codepen'>See the Pen <a href='http://codepen.io/keukenrolletje/pen/VLbjMB/'>Opening hour picker</a> by Joke Gysen (<a href='http://codepen.io/keukenrolletje'>@keukenrolletje</a>) on <a href='http://codepen.io'>CodePen</a>.</p><script async src=\"//assets.codepen.io/assets/embed/ei.js\"></script>",
+	"description": "A javascript opening hour picker. You can choose a day and multiple hours (you can even leave breaks between them). The values will get stored in a hidden input field so it's easier for the backend to access them. I also added a few transitions and a warning when no hours are selected.",
+	"services": {
+		"service": "html, css3, javascript, design",
+		"website": "http://codepen.io/keukenrolletje/pen/VLbjMB#0"
+	}
+}

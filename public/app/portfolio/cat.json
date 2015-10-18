@@ -1,0 +1,11 @@
+{
+	"id": "cat",
+	"name": "SVG cat animation",
+	"tag": "experiment",
+	"code": "<p data-height=\"510\" data-theme-id=\"4795\" data-slug-hash=\"JdqQVv\" data-default-tab=\"result\" data-user=\"keukenrolletje\" class='codepen'>See the Pen <a href='http://codepen.io/keukenrolletje/pen/JdqQVv/'>Svg Cat Animation</a> by Joke Gysen (<a href='http://codepen.io/keukenrolletje'>@keukenrolletje</a>) on <a href='http://codepen.io'>CodePen</a>.</p><script async src=\"//assets.codepen.io/assets/embed/ei.js\"></script>",
+	"description": "Cat svg animation written in Sass and animated with GreenSock Animation Platform. Svg made in illustrator. The tail is animated with SMIL",
+	"services": {
+		"service": "html, css3, GSAP, svg, SMIL, design",
+		"website": "http://codepen.io/keukenrolletje/pen/JdqQVv#0"
+	}
+}

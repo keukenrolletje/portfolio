@@ -1,0 +1,11 @@
+{
+	"id": "dropdown",
+	"name": "Pure CSS dropdown",
+	"tag": "experiment",
+	"code": "<p data-height=\"510\" data-theme-id=\"4795\" data-slug-hash=\"ILvze\" data-default-tab=\"result\" data-user=\"keukenrolletje\" class='codepen'>See the Pen <a href='http://codepen.io/keukenrolletje/pen/ILvze/'>pure css dropdown</a> by Joke Gysen (<a href='http://codepen.io/keukenrolletje'>@keukenrolletje</a>) on <a href='http://codepen.io'>CodePen</a>.</p><script async src=\"//assets.codepen.io/assets/embed/ei.js\"></script>",
+	"description": "This is a dropdown only animated with css, not a single line of javascript. This was the first time I used Sass.",
+	"services": {
+		"service": "html, css3, design",
+		"website": "http://codepen.io/keukenrolletje/pen/ILvze"
+	}
+}
