@@ -1,23 +1,34 @@
 <div ng-controller="workdetailCtrl" class="work-detail">
-	<header class="detail-header" ng-style="{'background-image': 'url(' + work.header + ')'}">
+	<header ng-if="work.tag == 'work'" class="detail-header" ng-style="{'background-image': 'url(' + work.header + ')'}">
 		<img ng-if="work.logo" ng-src="{{work.logo}}" class="logo">
-		<h1 ng-if="!work.logo" data-text="{{work.id}}">{{work.id}}</h1>
-		<h2 data-text="{{work.tagline}}">{{work.tagline}}</h2>
+		<h1 ng-if="!work.logo" data-text="{{work.name}}">{{work.name}}</h1>
+		<h2 ng-if="work.tagline" data-text="{{work.tagline}}">{{work.tagline}}</h2>
 	</header>
+	<div class="embed-nav" ng-if="work.tag == 'experiment'" html="{{work.code}}"></div>
 
 	<section class="smoky-section">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="column">
+					<div ng-if="work.tag =='work'" class="column">
 						<p>{{work.description}}</p>
+					</div>
+					<div ng-if="work.tag == 'experiment'" class="no-column">
+						<p ng-bind-html="work.description">{{work.description}}</p>
+						<p class="what-service"><span class="title-service">What:</span>
+							{{work.services.service}}</p>
+						<div class="col-md-12 website">
+							<div class="ghost-button">
+								<a href="{{work.services.website}}">See on codepen</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="white-section service-container">
+	<section ng-if="work.tag =='work'" class="white-section service-container">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-xs-12 services">
@@ -34,7 +45,11 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-xs-12 services">
-					<div class="service-part">
+					<div ng-if="work.services.client" class="service-part">
+						<h5>Client:</h5>
+						<p>{{work.services.client}}</p>
+					</div>
+					<div ng-if="work.services.with" class="service-part">
 						<h5>With:</h5>
 						<p>{{work.services.with}}</p>
 					</div>
@@ -47,18 +62,18 @@
 
 				<div class="col-md-12 website">
 					<div class="ghost-button-white">
-						<a href="{{work.website}}">Visit the website</a>
+						<a href="{{work.services.website}}">Visit the website</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="container-fluid">
+	<section ng-if="work.tag =='work'" class="container-fluid">
 		<img ng-src="{{img}}" ng-repeat="img in work.images">
 	</section>
 
-	<div class="white-section quote-wrapper">
+	<div ng-if="work.tag =='work'" class="white-section quote-wrapper">
 		<section class="container">
 			<blockquote>
 				<p>Design is how it works</p><br>
