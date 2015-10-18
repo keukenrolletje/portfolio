@@ -80,7 +80,8 @@ header {
   height: 100vh;
 
   h2{
-    margin: 0 25%;
+    margin: 2% auto;
+    max-width: 50%;
     @include vu(font-size, 3.2vw, $screen-lg-min);
     line-height: 1.3;
 
