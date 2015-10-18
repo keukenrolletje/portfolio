@@ -18,8 +18,6 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap', 
-    'appFilters',
-    'appServices',
     'appAnimations'
   ])
   .config(function ($routeProvider) {
