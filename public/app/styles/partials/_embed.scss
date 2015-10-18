@@ -1,0 +1,15 @@
+.embed-nav{
+	position: relative;
+	top: -42px;
+	width: 110%;
+    left: -20px;
+    height: 73vh;
+    overflow: hidden;
+}
+
+@media (max-width: $screen-xxs-max) {
+	.embed-nav{
+		width: 146%;
+    	left: -150px;
+	}
+}

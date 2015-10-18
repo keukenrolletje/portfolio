@@ -1,0 +1,24 @@
+{
+	"id": "vggie",
+	"name": "Vggie",
+	"tag": "work",
+	"header": "../images/vggieh.jpg",
+	"logo": "../images/vggie1.png",
+	"tagline": "Vggie is the place for everything veggie!",
+	"description": "As vegetarians we had far too much personal experience with the typical restaurant search. The endless searching through google. The vegetarian restaurant listing sites that look like they were built in the 90’s. And the walking and driving through neighborhoods looking for vegetarian restaurants. That’s why we built vggie.com. The largest, most complete search and discovery tool for vegetarian restaurants. ",
+	"services": {
+		"role": "front-end & back-end developer",
+		"service": [
+		"HTML / CSS3",
+		"javascript",
+		"PHP / laravel"
+		],
+		"with": "Laurent Van Winckel",
+		"when": "September 2015 - October 2015",
+		"website": "http://be.vggie.com/"
+	},
+	"images": [
+	"../images/vggiefullscreen.jpg",
+	"../images/vggiesmallscreen.jpg"
+	]
+}
