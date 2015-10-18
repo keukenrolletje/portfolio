@@ -88,6 +88,12 @@
 			width: 75%;
 		}
 	}
+
+	.no-column{
+		.ghost-button{
+			@include vu(font-size, 5vw, $screen-sm-max);
+		}
+	}
   }
 
  @media (max-width: $screen-xs-max) { 
@@ -526,6 +532,12 @@
 					margin-right: 5%;
 				}
 			}
+		}
+	}
+
+	.no-column{
+		.ghost-button{
+			@include vu(font-size, 9vw, $screen-xxs-min);
 		}
 	}
  }
