@@ -1,6 +1,6 @@
 <div reset ng-controller="workCtrl" class="portfolio">
 	<header>
-		<h3>Recent Work</h3>
+		<h3 class="line-large-green">Recent Work</h3>
 	</header>
 
 	<div class="work-filter">
@@ -15,7 +15,7 @@
 		<div class="work" ng-class-odd="'work-left'" ng-class-even="'work-right'">
 			<img ng-src="{{work.imageUrl}}">
 			<a href="#/portfolio/{{work.id}}">
-				<div class="description-card">
+				<div y="background" class="description-card">
 					<div class="description-inner">
 						<h4>{{work.name}}</h4>
 						<hr>
@@ -30,7 +30,7 @@
 		<div class="work" ng-class-odd="'work-left'" ng-class-even="'work-right'">
 			<img ng-src="{{work.imageUrl}}">
 			<a href="#/portfolio/{{work.id}}">
-				<div class="description-card">
+				<div y="background" class="description-card">
 					<div class="description-inner">
 						<h4>{{work.name}}</h4>
 						<hr>
