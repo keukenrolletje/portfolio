@@ -40,9 +40,12 @@ App.controller('workCtrl', ['$rootScope', '$scope', '$routeParams', '$http', fun
 			$scope.exp = '';
 		}
 
-		    $scope.isdef = function(work){
-			    return (work.tag === 'experiment');
-			};
+		$scope.isdef = function(work){
+		    return (work.tag === 'experiment');
+		};
+
+		/*Add this for parallax and include parallaxhelper*/
+		//$scope.background = parallaxHelper.createAnimator(-0.3, 150, -150, 50);
 
   }]).directive('reset', ['$document', function($document) {
   return {
