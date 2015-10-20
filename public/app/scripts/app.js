@@ -53,4 +53,5 @@ angular
     
 
      // $locationProvider.html5Mode(true);
+     // $location.Html5mode(true).hashbang("!");
   });
