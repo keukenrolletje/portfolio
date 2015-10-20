@@ -17,5 +17,14 @@ footer{
   .contact-message{
     padding-left: 36px;
   }
+
+  a{
+    color: $light;
+
+    &:hover, &:focus{
+      color: $gradient-start;
+      text-decoration: none;
+    }
+  }
 }
 
