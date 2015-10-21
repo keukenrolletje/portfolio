@@ -137,14 +137,20 @@ figure{
 
 .work-detail{
 	h5{
-		font-size: 24px;
-		display: inline-block;
+		font-size: 20px;
+		//display: inline-block;
+		//color: $darkest;
+		transform: none;
+		font-weight: 100;
+		text-transform: uppercase;
 	}
 
 	.services{
 		p, ul{
-			display: inline-block;
-			margin-left: 50px;
+			font-family: $open-sans;
+			padding-top: 0px;
+			//display: inline-block;
+			//margin-left: 50px;
 		}
 	}
 }

@@ -4,7 +4,7 @@
 		<h1 ng-if="!work.logo" data-text="{{work.name}}">{{work.name}}</h1>
 		<h2 ng-if="work.tagline" data-text="{{work.tagline}}">{{work.tagline}}</h2>
 	</header>
-	<div class="embed-nav" ng-if="work.tag == 'experiment'" html="{{work.code}}"></div>
+	<div class="embed-nav" style="margin-bottom: -42px;" ng-if="work.tag == 'experiment'" html="{{work.code}}"></div>
 
 	<section class="smoky-section">
 		<div class="container-fluid">
@@ -31,32 +31,36 @@
 	<section ng-if="work.tag =='work'" class="white-section service-container">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 col-xs-12 services">
+				<div class="col-sm-12 col-xs-12 services">
 					<div class="service-part">
 						<h5>Role:</h5>
 						<p>{{work.services.role}}</p>
+						<hr>
 					</div>
 
 					<div class="service-part service">
 						<h5>What:</h5>
-						<ul>
+						<!--<ul>
 							<li ng-repeat="service in work.services.service">{{service}}</li>
-						</ul>
+						</ul>-->
+						<p>{{work.services.service}}</p>
+						<hr>
 					</div>
-				</div>
-				<div class="col-sm-6 col-xs-12 services">
 					<div ng-if="work.services.client" class="service-part">
 						<h5>Client:</h5>
 						<p>{{work.services.client}}</p>
+						<hr>
 					</div>
 					<div ng-if="work.services.with" class="service-part">
 						<h5>With:</h5>
 						<p>{{work.services.with}}</p>
+						<hr>
 					</div>
 
 					<div class="service-part">
 						<h5>When:</h5>
 						<p>{{work.services.when}}</p>
+						
 					</div>
 				</div>
 
