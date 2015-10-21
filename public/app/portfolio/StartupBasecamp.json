@@ -8,10 +8,7 @@
 	"description": "Startup Basecamp is a living and co-working space built for entrepreneurs, by entrepreneurs... A place where startup professionals can come to live, build, and launch their professional projects in an inspiring environment with other like-minded pros in the startup ecosystem.",
 	"services": {
 		"role": "front-end developer",
-		"service": [
-		"HTML / bootstrap",
-		"css"
-		],
+		"service": "HTML / bootstrap, css",
 		"with": "Benjamin Evans, Laurent Van Winckel",
 		"client": "StartupBasecamp",
 		"when": "September 2015 - October 2015",
