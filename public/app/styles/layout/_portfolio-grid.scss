@@ -69,3 +69,22 @@
 		right: -80px;
 	}
 }
+
+//Portfolio on scroll animation
+.come-in-left {
+  transform: translateX(-150px);
+  animation: come-in 0.8s ease forwards;
+}
+
+@keyframes come-in {
+  to { transform: translateX(0); }
+}
+
+.come-in-right {
+  transform: translateX(150px);
+  animation: come-in 0.8s ease forwards;
+}
+
+@keyframes come-in {
+  to { transform: translateX(0); }
+}

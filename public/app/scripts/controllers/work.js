@@ -44,8 +44,24 @@ App.controller('workCtrl', ['$rootScope', '$scope', '$routeParams', '$http', fun
 		    return (work.tag === 'experiment');
 		};
 
+
 		/*Add this for parallax and include parallaxhelper*/
-		//$scope.background = parallaxHelper.createAnimator(-0.3, 150, -150, 50);
+		//$scope.background = parallaxHelper.createAnimator(-1);
+		/*$scope.background2 = function() {
+		  return {
+		  	transform: 'translateX(150px)'
+		  };
+		};*/
+
+		/*$scope.myOpacity = function(elementPosition) {
+		  var factor = -1;
+		  var pos = (Math.max(elementPosition.elemY*factor, 0));
+		  var slideIn = pos;
+
+		  return {
+		    transform: 'translateX('+slideIn+'px)',
+		  };
+		};*/
 
   }]).directive('reset', ['$document', function($document) {
   return {
@@ -58,4 +74,28 @@ App.controller('workCtrl', ['$rootScope', '$scope', '$routeParams', '$http', fun
       });
     }
   };
-}]);
+}]).directive('scrollLoad', function(){
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs){
+			$(element).visible(scope.$eval(attrs.scrollLoad));
+		}
+	};
+}).directive('scroll', function($window){
+	return function(){
+		angular.element($window).bind("scroll", function() {
+		var els = angular.element('.module');
+			angular.forEach(els, function( el ){
+			  var a = angular.element(el);
+			  if(a.visible(true)){
+			  	if(a.hasClass('work-left')){
+			  		a.addClass('come-in-left');
+			  	}
+			  	if(a.hasClass('work-right')){
+			  		a.addClass('come-in-right');
+			  	}
+			  }
+			});
+		});
+	};
+});
