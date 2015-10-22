@@ -13,7 +13,7 @@
 	</div>
 
 	<section ng-if="exp =='experiment'" ng-repeat="work in works | filter:isdef" class="tag-animation">
-		<div class="work module" ng-class-odd="'work-left'" ng-class-even="'work-right'">
+		<div class="work module" ng-class="{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
 			<img ng-src="{{work.imageUrl}}">
 			<a href="#/portfolio/{{work.id}}">
 				<div class="description-card">
@@ -28,7 +28,7 @@
 	</section>
 
 		<section ng-if="exp ==''" ng-repeat="work in works | filter:filters" class="tag-animation">
-		<div class="work module" ng-class-odd="'work-left'" ng-class-even="'work-right'">
+		<div class="work module" ng-class="{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
 			<img ng-src="{{work.imageUrl}}">
 			<a href="#/portfolio/{{work.id}}">
 				<div class="description-card">

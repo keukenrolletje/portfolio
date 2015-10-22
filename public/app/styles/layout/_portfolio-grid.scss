@@ -88,3 +88,8 @@
 @keyframes come-in {
   to { transform: translateX(0); }
 }
+
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
