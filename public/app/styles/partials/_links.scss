@@ -1,5 +1,5 @@
 .contact-page{
-	a[href^="mailto:"]{
+	a[href^="mailto:"], a[href^="tel:"]{
 		font-size: 24px;
 		color: $gradient-start;
 		font-weight: 100;

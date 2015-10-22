@@ -5,13 +5,13 @@
 	"header": "../images/portfolioh.jpg",
 	"logo": "../images/logow.png",
 	"tagline": "",
-	"description": "This was my first portfolio and the second website i ever made. I was also learning responsive design at the moment.",
+	"description": "This was my first portfolio and the second website i ever made. I designed this site and wanted to give it a professional feel. I also built it from scratch and I was also trying to learn responsive design at the time. It includes a working PHP contact form and I used <a href=\"https://jquery.com/\">jQuery</a> for the portfolio tabs (work and experiments).",
 	"services": {
 		"role": "front-end developer",
 		"service": "HTML, css, javascript, photoshop, responsive",
 		"with": "",
 		"client": "",
-		"when": "September 2015 - October 2015",
+		"when": "July 2013 - August 2013",
 		"website": "/old_site/index.html"
 	},
 	"images": [

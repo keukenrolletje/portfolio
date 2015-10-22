@@ -3,7 +3,7 @@
 	"name": "Name animation",
 	"tag": "experiment",
 	"code": "<p data-height=\"510\" data-theme-id=\"4795\" data-slug-hash=\"ojvErX\" data-default-tab=\"result\" data-user=\"keukenrolletje\" class='codepen'>See the Pen <a href='http://codepen.io/keukenrolletje/pen/ojvErX/'>Name animation</a> by Joke Gysen (<a href='http://codepen.io/keukenrolletje'>@keukenrolletje</a>) on <a href='http://codepen.io'>CodePen</a>.</p><script async src=\"//assets.codepen.io/assets/embed/ei.js\"></script>",
-	"description": "Name animation written in Sass and animated with both GreenSock Animation Platform and CSS3.",
+	"description": "Name animation written in Sass and animated with both GreenSock Animation Platform and CSS3. There is also a little animation on the gradient text and lines.",
 	"services": {
 		"service": "Html, Sass, javascript, GSAP",
 		"website": "http://codepen.io/keukenrolletje/pen/ojvErX"
