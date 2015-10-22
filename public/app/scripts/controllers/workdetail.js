@@ -22,16 +22,5 @@ App.controller('workdetailCtrl', ['$rootScope', '$scope', '$routeParams', '$http
     }
   };
 }])
-.directive('iframecss', [function(){
-	return{
-		restrict: 'A',
-		link: function(scope, element){
-			element.contents().find('.embed-nav').css({
-			    opacity: 1,
-			    color: 'purple'
-			});
-		}
-	};
-}])
 ;
 /*using directive to get html and script from json file. Html works with html-bind but script didn't work.*/
