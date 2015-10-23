@@ -96,7 +96,8 @@
           .bg-part:nth-child(#{$i}){ 
             left: $count;
             $count: $count + 12.5%;
-            transition-delay: random(9) / 10 +  s;
+            //do this in javascript!!
+            //transition-delay: random(9) / (10 + random(40)) +  s;
         }
       } 
 }

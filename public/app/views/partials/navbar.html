@@ -1,4 +1,4 @@
-<div class="menu">
+<div randomnumber class="menu">
   <div class="btn-container">
   <div class="menu-btn" ng-click="open=!open" ng-class="{'menu-btn-open': open, 'menu-btn-closed': !open}">
     <div class="burger burger-top"></div>
@@ -7,14 +7,14 @@
   </div>
   <div ng-class="{'menu-open': open, 'menu-closed': !open}" class="full-menu">
   	<div class="full-page">
-        <div class="bg-part"></div>
-        <div class="bg-part"></div>
-        <div class="bg-part"></div>
-        <div class="bg-part"></div>
-        <div class="bg-part"></div>
-        <div class="bg-part"></div>
-        <div class="bg-part"></div>
-        <div class="bg-part"></div>
+        <div class="bg-part" style="transition-delay: {{random[0]}}s"></div>
+        <div class="bg-part" style="transition-delay: {{random[1]}}s"></div>
+        <div class="bg-part" style="transition-delay: {{random[2]}}s"></div>
+        <div class="bg-part" style="transition-delay: {{random[3]}}s"></div>
+        <div class="bg-part" style="transition-delay: {{random[4]}}s"></div>
+        <div class="bg-part" style="transition-delay: {{random[5]}}s"></div>
+        <div class="bg-part" style="transition-delay: {{random[6]}}s"></div>
+        <div class="bg-part" style="transition-delay: {{random[7]}}s"></div>
     	<ul>
     		<li><a href="#/" ng-click="open=!open">Home</a></li>
     		<li><a href="#/about" ng-click="open=!open">About</a></li>
