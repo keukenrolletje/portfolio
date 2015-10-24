@@ -33,6 +33,12 @@ h6{
 	}
 }
 
+::selection{
+	background-color: $gradient-start;
+	color: $light;
+	-webkit-text-fill-color: initial; 
+}
+
 blockquote{
 	p{
 		font-family: $simplifica;
