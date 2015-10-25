@@ -1,44 +1,47 @@
-<div reset scrollLoad scroll ng-controller="workCtrl" class="portfolio">
+<header class="portfolio">
+	<h3 class="line-large-green">Recent Work</h3>
+</header>
 
-	<header>
-		<h3 class="line-large-green">Recent Work</h3>
-	</header>
+<main class="main" id="main">
+	<div reset scrollLoad scroll ng-controller="workCtrl" class="portfolio">
 
-	<div class="work-filter">
-			<div class="row">		
-				<div class="col-xs-4" ng-repeat="tag in tags">
-					<a ng-click="filters.tag = tag.tag; itemClicked($index)" ng-class="{ 'active': $index == selectedIndex }" ><span></span>{{tag.name}}</a>
+
+		<div class="work-filter">
+				<div class="row">		
+					<div class="col-xs-4" ng-repeat="tag in tags">
+						<a ng-click="filters.tag = tag.tag; itemClicked($index)" ng-class="{ 'active': $index == selectedIndex }" ><span></span>{{tag.name}}</a>
+					</div>
 				</div>
+		</div>
+
+		<section ng-if="exp =='experiment'" ng-repeat="work in works | filter:isdef" class="tag-animation">
+			<div class="work module" ng-class="{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
+				<img ng-src="{{work.imageUrl}}">
+				<a href="#/portfolio/{{work.id}}">
+					<div class="description-card">
+						<div class="description-inner">
+							<h4>{{work.name}}</h4>
+							<hr>
+							<p>{{work.description}}</p>
+						</div>
+					</div>
+				</a>	
 			</div>
+		</section>
+
+			<section ng-if="exp ==''" ng-repeat="work in works | filter:filters" class="tag-animation">
+			<div class="work module" ng-class="{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
+				<img ng-src="{{work.imageUrl}}">
+				<a href="#/portfolio/{{work.id}}">
+					<div class="description-card">
+						<div class="description-inner">
+							<h4>{{work.name}}</h4>
+							<hr>
+							<p>{{work.description}}</p>
+						</div>
+					</div>
+				</a>	
+			</div>
+		</section>
 	</div>
-
-	<section ng-if="exp =='experiment'" ng-repeat="work in works | filter:isdef" class="tag-animation">
-		<div class="work module" ng-class="{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
-			<img ng-src="{{work.imageUrl}}">
-			<a href="#/portfolio/{{work.id}}">
-				<div class="description-card">
-					<div class="description-inner">
-						<h4>{{work.name}}</h4>
-						<hr>
-						<p>{{work.description}}</p>
-					</div>
-				</div>
-			</a>	
-		</div>
-	</section>
-
-		<section ng-if="exp ==''" ng-repeat="work in works | filter:filters" class="tag-animation">
-		<div class="work module" ng-class="{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
-			<img ng-src="{{work.imageUrl}}">
-			<a href="#/portfolio/{{work.id}}">
-				<div class="description-card">
-					<div class="description-inner">
-						<h4>{{work.name}}</h4>
-						<hr>
-						<p>{{work.description}}</p>
-					</div>
-				</div>
-			</a>	
-		</div>
-	</section>
-</div>
+</main>

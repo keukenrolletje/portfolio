@@ -1,60 +1,65 @@
-<section class="smoky-section contact-page">
+<header class="smoky-section contact-page">
 	<h3 class="line-before-after">
 		<!--Lets build something together-->
 		Go ahead, get in touch!
 	</h3>
-	<div class="container contact-container">
-		<div class="row">
-			<div class="col-sm-6 col-xs-12">
+</header>
 
-				<p class="info-text">If you'd like to discuss a project or contract opportunities, please feel free to contact me.</p>
-				<p><i class="fa fa-map-marker info-i"></i> Brussels - Belgium</p>
-				<p><i class="fa fa-envelope info-i"></i> <a href='mailto:jokegysen@gmail.com?Subject=Hello%20again" target="_top"'>jokegysen@gmail.com</a></p>
-				<p><i class="fa fa-phone info-i"></i><a href="tel:+32470302872"> +32 470 302 872</a></p>
+<main class="main" id="main">
+	<section class="smoky-section contact-page">
+		<div class="container contact-container">
+			<div class="row">
+				<div class="col-sm-6 col-xs-12">
 
-				<div class="icons">
-					<a href="https://twitter.com/jokegysen"><i class="fa fa-twitter"></i></a>
-					<a href="https://www.pinterest.com/keukenrolletje/"><i class="fa fa-pinterest"></i></a>
-					<a href="https://www.facebook.com/joke.gysen"><i class="fa fa-facebook"></i></a>
-					<a href="https://be.linkedin.com/in/jokegysen"><i class="fa fa-linkedin"></i></a>
+					<p class="info-text">If you'd like to discuss a project or contract opportunities, please feel free to contact me.</p>
+					<p><i class="fa fa-map-marker info-i"></i> Brussels - Belgium</p>
+					<p><i class="fa fa-envelope info-i"></i> <a href='mailto:jokegysen@gmail.com?Subject=Hello%20again" target="_top"'>jokegysen@gmail.com</a></p>
+					<p><i class="fa fa-phone info-i"></i><a href="tel:+32470302872"> +32 470 302 872</a></p>
+
+					<div class="icons">
+						<a href="https://twitter.com/jokegysen"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.pinterest.com/keukenrolletje/"><i class="fa fa-pinterest"></i></a>
+						<a href="https://www.facebook.com/joke.gysen"><i class="fa fa-facebook"></i></a>
+						<a href="https://be.linkedin.com/in/jokegysen"><i class="fa fa-linkedin"></i></a>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<form ng-submit="submitForm()" ng-controller="contactCtrl" novalidate class="form-horizontal">
+						<div class="form-group">
+						  <label for="name" class="col-xs-3 control-label">Name</label>
+						  <div class="col-xs-9">
+						  	<input type="text" name="name" ng-model="formData.name" ng-class="{'error' : errorName}">
+						  </div>
+						</div>
+						<div class="form-group">
+						  <label for="email" class="col-xs-3 control-label">E-mail</label>
+						  <div class="col-xs-9">
+						  	<input type="email" name="email" ng-model="formData.email" ng-class="{'error' : errorEmail}">
+						  </div>
+						</div>
+						<div class="form-group">
+							<label for="message" class="col-xs-3 control-label">Message</label>
+							<div class="col-xs-9">
+						  		<textarea name="message" ng-class="{'error' : errorTextarea}" ng-model="formData.message"  rows="4"></textarea>
+						  	</div>
+						</div>
+						  <div class="ghost-button">
+							<a href="{{work.website}}">Send!</a>
+						  </div>
+						  <div ng-class="{'submissionMessage' : submission}" ng-bind="submissionMessage" ></div>
+					</form>
 				</div>
 			</div>
-			<div class="col-sm-6 col-xs-12">
-				<form ng-submit="submitForm()" ng-controller="contactCtrl" novalidate class="form-horizontal">
-					<div class="form-group">
-					  <label for="name" class="col-xs-3 control-label">Name</label>
-					  <div class="col-xs-9">
-					  	<input type="text" name="name" ng-model="formData.name" ng-class="{'error' : errorName}">
-					  </div>
-					</div>
-					<div class="form-group">
-					  <label for="email" class="col-xs-3 control-label">E-mail</label>
-					  <div class="col-xs-9">
-					  	<input type="email" name="email" ng-model="formData.email" ng-class="{'error' : errorEmail}">
-					  </div>
-					</div>
-					<div class="form-group">
-						<label for="message" class="col-xs-3 control-label">Message</label>
-						<div class="col-xs-9">
-					  		<textarea name="message" ng-class="{'error' : errorTextarea}" ng-model="formData.message"  rows="4"></textarea>
-					  	</div>
-					</div>
-					  <div class="ghost-button">
-						<a href="{{work.website}}">Send!</a>
-					  </div>
-					  <div ng-class="{'submissionMessage' : submission}" ng-bind="submissionMessage" ></div>
-				</form>
-			</div>
 		</div>
-	</div>
-</section>
-
-<div class="white-section">
-	<section class="container">
-		<blockquote>
-			<p>Design is how it works</p><br>
-			<!--cite handwritten svg? -->
-			<cite>- Steve Jobs -</cite>
-		</blockquote>
 	</section>
-</div>
+
+	<div class="white-section">
+		<section class="container">
+			<blockquote>
+				<p>Design is how it works</p><br>
+				<!--cite handwritten svg? -->
+				<cite>- Steve Jobs -</cite>
+			</blockquote>
+		</section>
+	</div>
+</main>
