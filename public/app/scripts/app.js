@@ -27,24 +27,29 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'main',
+        title: 'Joke Gysen: Front-end developer'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controllerAs: 'about',
+        title: 'About Joke Gysen | Front-end developer'
       })
       .when('/portfolio', {
         templateUrl: 'views/portfolio.html',
-        controller: 'workCtrl'
+        controller: 'workCtrl',
+        title: 'Portfolio Joke Gysen | Front-end developer'
       })
       .when('/portfolio/:id', {
         templateUrl: 'views/workdetail.html',
-        controller: 'workdetailCtrl'
+        controller: 'workdetailCtrl',
+        title: '| Joke Gysen | Front-end developer'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'contactCtrl'
+        controller: 'contactCtrl',
+        title: 'Contact Joke Gysen | Front-end developer'
       })
       /*.otherwise({
         redirectTo:'/'
@@ -54,6 +59,18 @@ angular
      // $locationProvider.html5Mode(true);
      // $location.Html5mode(true).hashbang("!");
   })
+  .run(['$location', '$rootScope', '$routeParams', function($location, $rootScope, $routeParams){
+    $rootScope.$on('$routeChangeSuccess', function(event, current){
+      console.log(current.$$route.controller);
+      //$routeParams.id
+      if(current.$$route.controller === 'workdetailCtrl'){
+        $rootScope.title = $routeParams.id + ' ' + current.$$route.title;
+      }
+      else if(current.$$route){
+        $rootScope.title = current.$$route.title;
+      }
+    });
+  }])
   .directive('randomnumber', function(){
     return {
       restrict: 'A',
