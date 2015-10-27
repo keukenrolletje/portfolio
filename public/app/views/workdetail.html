@@ -1,5 +1,5 @@
 <header ng-if="work.tag == 'work'" class="detail-header work-detail" ng-style="{'background-image': 'url(' + work.header + ')'}">
-	<img ng-if="work.logo" ng-src="{{work.logo}}" class="logo">
+	<img ng-if="work.logo" ng-src="{{work.logo}}" class="logo" alt="{{work.name}} logo">
 	<h1 ng-if="!work.logo" data-text="{{work.name}}">{{work.name}}</h1>
 	<h2 ng-if="work.tagline" data-text="{{work.tagline}}">{{work.tagline}}</h2>
 </header>
@@ -76,7 +76,7 @@
 		</section>
 
 		<section ng-if="work.tag =='work'" class="container-fluid">
-			<img ng-src="{{img}}" ng-repeat="img in work.images">
+			<img ng-src="{{img}}" ng-repeat="img in work.images" alt="{{work.alt}}">
 		</section>
 
 		<div ng-if="work.tag =='work'" class="white-section quote-wrapper">

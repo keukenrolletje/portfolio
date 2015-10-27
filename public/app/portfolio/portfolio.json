@@ -17,5 +17,6 @@
 	"images": [
 	"../images/portfoliofull.jpg",
 	"../images/portfoliosmall.jpg"
-	]
+	],
+	"alt": "First Portfolio screen mockup" 
 }

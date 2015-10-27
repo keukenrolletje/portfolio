@@ -17,5 +17,6 @@
 	"images": [
 	"../images/sbcfull.jpg",
 	"../images/sbcfull2.jpg"
-	]
+	],
+	"alt": "Startup Basecamp screen mockup" 
 }

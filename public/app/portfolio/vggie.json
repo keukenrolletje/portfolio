@@ -16,5 +16,6 @@
 	"images": [
 	"../images/vggiefullscreen.jpg",
 	"../images/vggiesmallscreen.jpg"
-	]
+	],
+	"alt": "Vggie screen mockup" 
 }

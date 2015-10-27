@@ -23,7 +23,7 @@
 			<!-- add ng-if for class names? inside ng-repeat? -->
 			<a ng-repeat="work in grid" href="{{work.website}}"  >
 					<figure ng-if="work.id == 'Vggie'" class="img-1">
-						<img  ng-src="{{work.imageUrl}}" class="grid">
+						<img  ng-src="{{work.imageUrl}}" class="grid" alt="link to Vggie detail page">
 						<figcaption>
 							<div class="company-heading">
 								<h4 class="line-large-white">{{work.name}}</h4>
@@ -33,7 +33,7 @@
 					</figure>
 
 				<figure ng-if="work.id == 'StartupBasecamp'" class="img-2 figure-small">
-					<img  ng-src="{{work.imageUrl}}" class="grid">
+					<img  ng-src="{{work.imageUrl}}" class="grid" alt="link to Startup Basecamp detail page">
 					<figcaption>
 						<div class="company-heading">
 							<h6 class="line-small-white">{{work.name}}</h6>
@@ -43,7 +43,7 @@
 				</figure>
 
 				<figure ng-if="work.id == 'Oleaz'" class="img-3 figure-small">
-					<img  ng-src="{{work.imageUrl}}" class="grid">
+					<img  ng-src="{{work.imageUrl}}" class="grid" alt="link to Oleaz detail page">
 					<figcaption>
 						<div class="company-heading">
 							<h6 class="line-small-white">{{work.name}}</h6>

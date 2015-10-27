@@ -17,5 +17,6 @@
 	"images": [
 	"../images/wdocfull.jpg",
 	"../images/wdocfull2.jpg"
-	]
+	],
+	"alt": "WDOC screen mockup" 
 }
