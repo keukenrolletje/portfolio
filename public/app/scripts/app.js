@@ -86,4 +86,16 @@ angular
        });
       }
   };
-});
+}).directive('outlinekeypress', function(){
+  return {
+    restrict: 'A',
+    link: function(){
+      var el = angular.element('.menu-btn');
+
+      el.on('click', function(){
+        el.addClass('clickOutline');
+      });
+    }
+  };
+})
+  ;
