@@ -17,6 +17,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ngAria',
     'ui.bootstrap', 
     'appAnimations', 
     'duParallax',
