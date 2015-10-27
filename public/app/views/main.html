@@ -12,19 +12,21 @@
 	 Please take a look at my portfolio and hopefully we can chat!</p>
 		</section>
 	</div>
-	<div class="white-section">
+	<div class="white-section" ng-controller="MainCtrl">
 		<section class="container-sm-2">
 			<div class="main-heading">
 				<h3 class="line-large-green">Recent work</h3>
 			</div>
 		</section>
-		<div class="main-grid" ng-controller="MainCtrl">
+		<div class="main-grid" hovertab>
 
 			<!-- add ng-if for class names? inside ng-repeat? -->
-			<a ng-repeat="work in grid" href="{{work.website}}"  >
+			<a ng-repeat="work in grid" href="{{work.website}}">
 					<figure ng-if="work.id == 'Vggie'" class="img-1">
-						<img  ng-src="{{work.imageUrl}}" class="grid" alt="link to Vggie detail page">
-						<figcaption>
+						<span class="sr-only">{{work.name}} - {{work.description}}</span>
+						<img  ng-src="{{work.imageUrl}}" class="grid" alt="Vggie detail page">
+						
+						<figcaption tabindex="0" role="button">
 							<div class="company-heading">
 								<h4 class="line-large-white">{{work.name}}</h4>
 								<p>{{work.description}}</p>
@@ -33,8 +35,10 @@
 					</figure>
 
 				<figure ng-if="work.id == 'StartupBasecamp'" class="img-2 figure-small">
-					<img  ng-src="{{work.imageUrl}}" class="grid" alt="link to Startup Basecamp detail page">
-					<figcaption>
+					<span class="sr-only">{{work.name}} - {{work.description}}</span>
+					<img  ng-src="{{work.imageUrl}}" class="grid" alt="Startup Basecamp detail page">
+
+					<figcaption tabindex="0" role="button">
 						<div class="company-heading">
 							<h6 class="line-small-white">{{work.name}}</h6>
 							<p>{{work.description}}</p>
@@ -43,8 +47,10 @@
 				</figure>
 
 				<figure ng-if="work.id == 'Oleaz'" class="img-3 figure-small">
-					<img  ng-src="{{work.imageUrl}}" class="grid" alt="link to Oleaz detail page">
-					<figcaption>
+					<span class="sr-only">{{work.name}} - {{work.description}}</span>
+					<img  ng-src="{{work.imageUrl}}" class="grid" alt="Oleaz detail page">
+					
+					<figcaption tabindex="0" role="button">
 						<div class="company-heading">
 							<h6 class="line-small-white">{{work.name}}</h6>
 							<p>{{work.description}}</p>
