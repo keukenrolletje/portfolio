@@ -54,7 +54,7 @@
 
   ul{
     transform: translate(0px, -450px);
-    @include prefix(transition, 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) transform, ms moz o webkit);
+    @include prefix(transition, transform 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) , ms moz o webkit);
   }
 }
 

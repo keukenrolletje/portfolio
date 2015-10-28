@@ -8,9 +8,9 @@
 
 		<div class="work-filter">
 				<div class="row">		
-					<div class="col-xs-4 tags" ng-repeat="tag in tags" tabindex="0" role="button">
-						<a ng-click="filters.tag = tag.tag; itemClicked($index)" ng-class="{ 'active': $index == selectedIndex }" ><span></span>{{tag.name}}</a>
-					</div>
+					<a class="col-xs-4 tags" ng-repeat="tag in tags" tabindex="0" role="button">
+						<div ng-click="filters.tag = tag.tag; itemClicked($index)" ng-keypress="filters.tag = tag.tag; itemClicked($index)" ng-class="{ 'active': $index == selectedIndex }" ><span></span>{{tag.name}}</div>
+					</a>
 				</div>
 		</div>
 
@@ -18,7 +18,7 @@
 			<div class="work module" ng-class="{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
 				<img ng-src="{{work.imageUrl}}" alt="{{work.name}}">
 				<a href="#/portfolio/{{work.id}}">
-					<div class="description-card">
+					<div class="description-card"  >
 						<div class="description-inner">
 							<h4>{{work.name}}</h4>
 							<hr>

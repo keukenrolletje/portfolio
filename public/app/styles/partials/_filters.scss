@@ -43,16 +43,18 @@
 	.work-filter{
 		a{
 			&:hover, &:active, &.active{
-				&:before, &:after{
-					content: "";
-					width: 35px;
-					height: 1px;
-					background-color: $darkest;
-					top: -6px;
-					margin: 0 10px;
-	    			position: relative;
-					/*before and after are display inline, so width and height won't show*/
-					display: inline-block;
+				div{
+					&:before, &:after{
+						content: "";
+						width: 35px;
+						height: 1px;
+						background-color: $darkest;
+						top: -6px;
+						margin: 0 10px;
+		    			position: relative;
+						/*before and after are display inline, so width and height won't show*/
+						display: inline-block;
+					}
 				}
 			}
 		}
