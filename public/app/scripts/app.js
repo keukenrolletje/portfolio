@@ -86,16 +86,16 @@ angular
        });
       }
   };
-}).directive('outlinekeypress', function(){
-  return {
-    restrict: 'A',
-    link: function(){
-      var el = angular.element('.menu-btn');
-
-      el.on('click', function(){
-        el.addClass('clickOutline');
+}).directive('outlineclick', function ($document) {
+    return function () {
+      $document.on('click', function(){
+        angular.element('body').append('<style>:focus{outline:none;}</style>');
       });
-    }
-  };
-})
-  ;
+    };
+}).directive('outlinepress', function ($document) {
+    return function () {
+      $document.on('keypress keydown', function(){
+        angular.element('body').append('<style>:focus{outline:5px solid #56b4d3;}</style>');
+      });
+    };
+});
