@@ -14,7 +14,7 @@
 					<p class="info-text">If you'd like to discuss a project or contract opportunities, please feel free to contact me.</p>
 					<p><i class="fa fa-map-marker info-i"></i> Brussels - Belgium</p>
 					<p><i class="fa fa-envelope info-i"></i> <a href='mailto:jokegysen@gmail.com?Subject=Hello%20again" target="_top"'>jokegysen@gmail.com</a></p>
-					<p><i class="fa fa-phone info-i"></i><a href="tel:+32470302872"> +32 470 302 872</a></p>
+					<p><i class="fa fa-phone info-i"></i><a href="tel:+32470302872"><span class="screen-reader-text">Phone number</span> +32 470 302 872</a></p>
 
 					<div class="icons">
 						<a href="https://twitter.com/jokegysen"><i class="fa fa-twitter"></i><span class="screen-reader-text">Follow me on Twitter</span></a>
@@ -28,19 +28,19 @@
 						<div class="form-group">
 						  <label for="name" class="col-xs-3 control-label">Name</label>
 						  <div class="col-xs-9">
-						  	<input type="text" name="name" ng-model="formData.name" ng-class="{'error' : errorName}">
+						  	<input type="text" name="name" id="name" ng-model="formData.name" ng-class="{'error' : errorName}">
 						  </div>
 						</div>
 						<div class="form-group">
 						  <label for="email" class="col-xs-3 control-label">E-mail</label>
 						  <div class="col-xs-9">
-						  	<input type="email" name="email" ng-model="formData.email" ng-class="{'error' : errorEmail}">
+						  	<input type="email" name="email" id="email" ng-model="formData.email" ng-class="{'error' : errorEmail}">
 						  </div>
 						</div>
 						<div class="form-group">
 							<label for="message" class="col-xs-3 control-label">Message</label>
 							<div class="col-xs-9">
-						  		<textarea name="message" ng-class="{'error' : errorTextarea}" ng-model="formData.message"  rows="4"></textarea>
+						  		<textarea name="message" id="message" ng-class="{'error' : errorTextarea}" ng-model="formData.message"  rows="4"></textarea>
 						  	</div>
 						</div>
 						  <div class="ghost-button">

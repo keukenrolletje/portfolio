@@ -95,7 +95,7 @@ angular
 }).directive('outlinepress', function ($document) {
     return function () {
       $document.on('keypress keydown', function(){
-        angular.element('body').append('<style>:focus{outline:5px solid #56b4d3;} a:focus .description-card, a:active .description-card{outline:5px solid #56b4d3;}</style>');
+        angular.element('body').append('<style>:focus{outline:2px solid #56b4d3;} a:focus .description-card, a:active .description-card{outline:2px solid #56b4d3;}  a:focus figure, a:focus .see-more{outline-offset: 10px; border:2px solid #56b4d3;} </style>');
       });
     };
 });
