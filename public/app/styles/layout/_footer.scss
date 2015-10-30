@@ -22,7 +22,7 @@ footer{
     color: $light;
 
     &:hover, &:focus{
-      color: $gradient-start;
+      color: $gradient-stop;
       text-decoration: none;
     }
   }

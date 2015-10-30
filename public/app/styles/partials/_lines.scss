@@ -3,7 +3,7 @@
 				content: "";
 				width: 70px;
 				height: 1px;
-				background-color: $gradient-start;
+				background-color: $gradient-stop;
 				vertical-align: middle;
 				margin: 0 15px;
     			position: relative;
@@ -27,6 +27,24 @@
 	&:before, &:after{
 		width: 2%;
 		background-color: $light;
+	}
+}
+
+.line-large-black{
+	@extend .line-before-after;
+
+	&:before, &:after{
+		width: 10%;
+		background-color: $darkest;
+	}
+}
+
+.line-small-black{
+	@extend .line-before-after;
+
+	&:before, &:after{
+		width: 2%;
+		background-color: $darkest;
 	}
 }
 

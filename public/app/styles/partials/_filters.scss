@@ -1,9 +1,30 @@
 .work-filter{
-	background-color: $gradient-start;
+	
+  	/* fallback */
+  	background-color: $gradient-stop;
+  	background-repeat: repeat-y;
+
+  	/* Safari 4-5, Chrome 1-9 */
+  	background: -webkit-gradient(linear, left top, right top, 0% 0%, 0% 100%, from($gradient-start), to($gradient-stop));
+
+  	/* Safari 5.1, Chrome 10+ */
+  	background: -webkit-linear-gradient(left, $gradient-start 2%, $gradient-stop);
+
+  	/* Firefox 3.6+ */
+  	background: -moz-linear-gradient(left, $gradient-start, $gradient-stop);
+
+ 	/* IE 10 */
+  	background: -ms-linear-gradient(left, $gradient-start, $gradient-stop);
+
+  	/* Opera 11.10+ */
+  	background: -o-linear-gradient(left, $gradient-start, $gradient-stop);
+
 	line-height: 60px;
 	padding-right: 15px;
 	z-index: 1;
     position: relative;
+
+    @include prefix(box-shadow, 2px 2px 7px rgba(0, 0, 0, 0.44), webkit moz o spec);
 
 	[class*="col-"]{
 		text-align: center;
@@ -19,7 +40,7 @@
 		text-transform: uppercase;
 		position: relative;
 
-		&:hover, &:active, &.active{
+		&:hover, &:active, .active{
 			color: $darkest;
 
 			span{
@@ -28,12 +49,33 @@
 				height: 0; 
 				border-left: 10px solid transparent;
 				border-right: 10px solid transparent;	
-				border-top: 12px solid $gradient-start;
-				top: 40px;
+				top: 60px;
 				margin-left: auto;
 				margin-right: auto;
 				left: 0;
 				right: 0;
+			}
+		}
+	}
+
+	a:first-child{
+		&:hover, &:active, .active{
+			span{
+				border-top: 12px solid $gradient-start;
+			}
+		}
+	}
+	a:nth-child(2){
+		&:hover, &:active, .active{
+			span{
+				border-top: 12px solid #EE3A52;
+			}
+		}
+	}
+	a:nth-child(3){
+		&:hover, &:active, .active{
+			span{
+				border-top: 12px solid $gradient-stop;
 			}
 		}
 	}
@@ -42,7 +84,7 @@
 @media (min-width: $screen-md-min) {
 	.work-filter{
 		a{
-			&:hover, &:active, &.active{
+			&:hover, &:active{
 				div{
 					&:before, &:after{
 						content: "";
@@ -55,6 +97,20 @@
 						/*before and after are display inline, so width and height won't show*/
 						display: inline-block;
 					}
+				}
+			}
+
+			.active{
+				&:before, &:after{
+					content: "";
+					width: 35px;
+					height: 1px;
+					background-color: $darkest;
+					top: -6px;
+					margin: 0 10px;
+		    		position: relative;
+					/*before and after are display inline, so width and height won't show*/
+					display: inline-block;
 				}
 			}
 		}

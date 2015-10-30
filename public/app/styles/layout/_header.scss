@@ -16,7 +16,7 @@ header {
   h1, h2, h6{
     position: relative;
     text-align: center;
-    @extend %text-gradient;
+    color: $light;
   }
 
   h1{
@@ -28,23 +28,13 @@ header {
     margin-right: auto;
     text-transform: uppercase;
     display: inline-block;
-
-
-    /*when using text-shadow you must use data-text attr in html*/
-    &:after{
-      @include text-shadow(3px, 5px);
-    }
   }
 
   h2{
     @include vu(font-size, 2.5vw, $screen-lg-min);
-    margin: 1% auto;
+    margin: 0% auto;
     font-family: 'Open Sans';
     -webkit-font-smoothing: antialiased !important;
-
-    &:after{
-      @include text-shadow(3px, 3px);
-    }
   }
 
   h6{
@@ -60,7 +50,7 @@ header {
 }
 
 .main-header{
-    background-image: image-url('path.png');
+    background-image: image-url('bg16e.jpg');
     height: 100vh;
 }
 

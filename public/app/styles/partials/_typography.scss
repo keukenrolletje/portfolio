@@ -1,5 +1,5 @@
 h3{
-	color: $sea-green;
+	color: $gradient-stop;
 	font-family: $open-sans;
 	font-weight:700; 
 	@include vu(font-size, 4.7vw, $screen-xs-max);
@@ -24,6 +24,14 @@ h6{
 	font-size: 35px;
 }
 
+a{
+	color: $gradient-stop;
+
+	&:hover, &:focus, &:active{
+		color: $gradient-start;
+	}
+}
+
 .smoky-section{
 	p{
 		font-family: $open-sans;
@@ -34,7 +42,7 @@ h6{
 }
 
 ::selection{
-	background-color: $gradient-start;
+	background-color: $gradient-stop;
 	color: $light;
 	-webkit-text-fill-color: initial; 
 }
@@ -74,7 +82,7 @@ footer{
 
 figure{
 	p{
-		color: $light;
+		color: $darkest;
 		font-size: 18px;
 		font-family: $helvetica-n;
 	}

@@ -309,7 +309,7 @@
 
 			h4, h6{
 					opacity: 1;
-					color: $light;
+					color: $darkest;
 			}
 
 			p{
@@ -330,13 +330,13 @@
 					background-color: $darkest;
 			}
 
-			.line-large-white{
+			.line-large-black{
 					&:before, &:after{
 						width: 10%;
 					}
 			}
 
-			.line-small-white{
+			.line-small-black{
 					&:before, &:after{
 						width: 20px;
 					}
@@ -549,7 +549,7 @@
 			&:hover{
 				h4, h6{
 					opacity: 1;
-					color: $light;
+					color: $darkest;
 				}
 
 				p{
@@ -560,13 +560,13 @@
 					opacity: 0.7;	
 				}
 
-				.line-large-white{
+				.line-large-black{
 					&:before, &:after{
 						width: 10%;
 					}
 				}
 
-				.line-small-white{
+				.line-small-black{
 					&:before, &:after{
 						width: 20px;
 					}

@@ -8,7 +8,7 @@
 		-webkit-font-smoothing: antialiased;
 
 		&:hover{
-			color: $gradient-start;
+			color: $gradient-stop;
 			transform: rotate(20deg) scale(1.2);
 		}
 	}
