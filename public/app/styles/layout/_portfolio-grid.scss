@@ -103,3 +103,21 @@
 		}
 	}
 }
+
+@media (max-width: $screen-xxs-min) {
+	.come-in-left, .come-in-right{
+		transform: translateY(150px);
+		animation: slide-up 0.8s ease forwards;
+	}
+
+	@keyframes slide-up {
+		to {
+			transform: translateX(0);
+		}
+	}
+
+	.already-visible  + div{
+		transform: translateX(0);
+		animation: none;
+	}
+}

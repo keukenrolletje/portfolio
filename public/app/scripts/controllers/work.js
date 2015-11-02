@@ -43,6 +43,7 @@ App.controller('workCtrl', ['$rootScope', '$scope', '$routeParams', '$http', fun
 		$scope.isdef = function(work){
 		    return (work.tag === 'experiment');
 		};
+		console.log($(window).width());
 
   }]).directive('reset', ['$document', function($document) {
   return {
@@ -71,10 +72,10 @@ App.controller('workCtrl', ['$rootScope', '$scope', '$routeParams', '$http', fun
 			angular.forEach(els, function( el ){
 			  var a = angular.element(el);
 			  if(a.visible(true)){
-			  	if(a.hasClass('work-left')){
+			  	if(a.hasClass('work-left') && !a.hasClass('already-visible')){
 			  		a.addClass('come-in-left');
 			  	}
-			  	if(a.hasClass('work-right')){
+			  	if(a.hasClass('work-right') && !a.hasClass('already-visible')){
 			  		a.addClass('come-in-right');
 			  	}
 			  }
