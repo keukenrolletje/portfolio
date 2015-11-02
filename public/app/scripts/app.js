@@ -72,6 +72,21 @@ angular
       }
     });
   }])
+  .directive('randomnumber', function(){
+    return {
+      restrict: 'A',
+      link: function($rootScope){
+       var navbutton = angular.element('.menu-btn');
+       navbutton.bind('click', function(){
+          $rootScope.random = [];
+          for (var i=0; i<7; i++) {
+            var randomNbr = Math.random() * (0.7 - 0.1) + 0.1;
+            $rootScope.random.push(randomNbr);
+          }
+       });
+      }
+    };
+  })
   .directive('iestyles', function () {
     return {
 
@@ -100,21 +115,6 @@ angular
         }
       }
     };
-  })
-  .directive('randomnumber', function(){
-    return {
-      restrict: 'A',
-      link: function($rootScope){
-       var navbutton = angular.element('.menu-btn');
-       navbutton.bind('click', function(){
-          $rootScope.random = [];
-          for (var i=0; i<7; i++) {
-            var randomNbr = Math.random() * (0.7 - 0.1) + 0.1;
-            $rootScope.random.push(randomNbr);
-          }
-       });
-      }
-  };
 }).directive('outlineclick', function ($document) {
     return function () {
       $document.on('click', function(){
