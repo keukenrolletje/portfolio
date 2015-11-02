@@ -3,7 +3,7 @@
 @include font-face("Helvetica Neue", font-files("../../fonts/HelveticaNeue.ttf"));
 //@include font-face("Helvetica Neue light", font-files("../../fonts/HelveticaNeue-Light.otf"));
 
-$simplifica: "Simplifica";
+$simplifica: "Simplifica", 'Open Sans Condensed', sans-serif;
 
 //font stacks
 $roboto: "Roboto", sans-serif;

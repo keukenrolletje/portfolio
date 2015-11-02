@@ -72,6 +72,23 @@ angular
       }
     });
   }])
+  .directive('iestyles', function () {
+    return {
+
+      restrict: 'A',
+      link: function(){
+       //check for ie and apply ie specific styles
+        var ua = window.navigator.userAgent;
+        
+        console.log(ua.indexOf('Trident'));
+
+        if (ua.indexOf('Trident') > 0) {
+          console.log('ii');
+          angular.element('body').addClass('ie');
+        }
+      }
+    };
+  })
   .directive('randomnumber', function(){
     return {
       restrict: 'A',

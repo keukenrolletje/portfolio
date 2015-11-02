@@ -33,6 +33,9 @@
 
 	a{
 		@extend %text-gradient;
+		&:hover, &:focus, &:active{
+			text-decoration: none;
+		}
 	}
 
 	&:hover{

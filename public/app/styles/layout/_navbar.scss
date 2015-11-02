@@ -93,3 +93,13 @@
 .about{
 	position: relative;
 }
+
+.ie{
+	.menu{
+		.full-menu{
+			ul li a{
+				display: inline-block;
+			}
+		}
+	}
+}
