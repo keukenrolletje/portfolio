@@ -1,17 +1,29 @@
 .main-grid{
-	height: 50vw;
+	@include vu(height, 50vw, $screen-md-min);
 	width: 100%;
 }
 
 .img-1{
-	@include size(50%, 50vw);
+	width: 50%;
+	@include vu(height, 50vw, $screen-md-min);
 	display: inline-block;
 	float: left;
 }
 
 .img-2, .img-3{
-	@include size(25%, 25vw);
+	width: 25%;
+	@include vu(height, 25vw, $screen-md-min);
 	float: left;
+}
+
+.see-more{
+	width: 50%;
+	@include vu(height, 25vw, $screen-md-min);
+	float: left;
+}
+
+.saf .see-more{
+	height: 350px;
 }
 
 figure{
@@ -124,5 +136,11 @@ figure{
 			width: 200px;
 			height: auto;
 		}
+	}
+}
+
+.saf{
+	.about .img-1{
+		height: 100%;
 	}
 }

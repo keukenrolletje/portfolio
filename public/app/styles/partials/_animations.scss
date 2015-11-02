@@ -59,7 +59,7 @@
 }
 
 .full-menu.menu-open {
-  height: 100vh;
+  @include vu(height, 100vh, $screen-md-min);
 
   .full-page{
     transform: translate(0px, 0px);

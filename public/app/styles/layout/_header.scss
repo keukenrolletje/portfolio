@@ -52,6 +52,7 @@ header {
 .main-header{
     background-image: image-url('bg16e.jpg');
     height: 100vh;
+    height: 100%;
 }
 
 /*fix photo size in photoshop*/
@@ -67,7 +68,7 @@ header {
 
 
 .detail-header{
-  height: 100vh;
+  @include vu(height, 100vh, $screen-md-min);
 
   h2{
     margin: 2% auto;
@@ -91,6 +92,14 @@ header {
   .detail-header{
     h2{
       width: 50%;
+    }
+  }
+}
+
+.saf{
+  header{
+    h1, .logo{
+      margin-top: 18%;
     }
   }
 }

@@ -7,8 +7,14 @@
 }
 
 /*global styles*/
-html{
+html, body{
   height: 100%;
+}
+
+.saf{
+	.view-frame, .view-container{
+		height: 100%;
+	}
 }
 
 html{

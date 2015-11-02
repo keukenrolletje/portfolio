@@ -1,3 +1,4 @@
+<div ng-include="'views/partials/navbar.html'"></div>
 <header ng-if="work.tag == 'work'" class="detail-header work-detail" ng-style="{'background-image': 'url(' + work.header + ')'}">
 	<img ng-if="work.logo" ng-src="{{work.logo}}" class="logo" alt="{{work.name}} logo">
 	<h1 ng-if="!work.logo" data-text="{{work.name}}">{{work.name}}</h1>
@@ -92,3 +93,4 @@
 
 	</div>
 </main>
+<div ng-include="'views/partials/footer.html'"></div>

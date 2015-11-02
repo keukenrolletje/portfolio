@@ -86,10 +86,19 @@
   $ratio: $unit / ($unit * 0 + 1) / 100;
   // Calc and store return values
   $widthVal: floor($width * $ratio);
-  
-  @if $u == vw { 
-    #{$property}: #{$widthVal};
-  }
 
+  //percentage
+  $percent: ($unit / ($unit * 0 + 1)) + '%';
+  
+  
+  #{$property}: #{$widthVal};
+  
+  @if $property == 'height' {
+    #{$property}: #{$percent};
+  }
+  @if $property == 'width' {
+    #{$property}: #{$percent};
+  }
+  
   #{$property}: #{$unit};
 }

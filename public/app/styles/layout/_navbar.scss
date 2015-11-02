@@ -35,8 +35,7 @@
 	}
 
 	.full-menu{
-		
-  		width: 100vw;
+  		@include vu(width, 100vw, $screen-md-min);
   		max-width:100%;
   		
   		background-color: $darkest;
@@ -101,5 +100,11 @@
 				display: inline-block;
 			}
 		}
+	}
+}
+
+.saf{
+	.full-menu.menu-open ul{
+		margin-top: 10%;
 	}
 }

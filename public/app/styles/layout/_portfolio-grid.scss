@@ -93,3 +93,13 @@
   transform: translateY(0);
   animation: none;
 }
+
+.saf{
+	.description-card{
+		height: 200px;
+
+		.description-inner{
+			top: 20%;
+		}
+	}
+}

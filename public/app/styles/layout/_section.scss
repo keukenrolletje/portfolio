@@ -134,3 +134,25 @@ section{
 		margin-bottom: 20px;
 	}
 }
+
+.saf{
+	.about .description{
+		height: 100%;
+
+		p{
+			font-size: 19px;
+		}
+
+		.large{
+			font-size: 70px;
+		}
+	}
+
+	.top-about{
+		background-color: $darkest;
+	}
+
+	.job-position{
+		display: none;
+	}
+}

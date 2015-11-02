@@ -77,14 +77,26 @@ angular
 
       restrict: 'A',
       link: function(){
-       //check for ie and apply ie specific styles
-        var ua = window.navigator.userAgent;
-        
-        console.log(ua.indexOf('Trident'));
+        // Browser with version  Detection
+      navigator.sayswho= (function(){
+          var ua= navigator.userAgent, tem;
+          var M= ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+          if(M && (tem= ua.match(/version\/([\.\d]+)/i))!== null){
+            M[2]= tem[1];
+          } 
+          M= M[2];
+          return M;
+        })();
 
-        if (ua.indexOf('Trident') > 0) {
-          console.log('ii');
+       //check for ie and apply ie specific styles
+        var ua1 = window.navigator.userAgent;
+        console.log(navigator.sayswho);
+
+        if (ua1.indexOf('Trident') > 0) {
           angular.element('body').addClass('ie');
+        }
+        else if(/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent) && navigator.sayswho < '7.9.9'){
+          angular.element('body').addClass('saf');
         }
       }
     };
