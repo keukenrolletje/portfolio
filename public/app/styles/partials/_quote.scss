@@ -8,25 +8,16 @@ blockquote {
   
 
   p{
+    @include vu(font-size, 5.5vw, $screen-lg-min);
     padding-right: 10px;
-    display: inline; 
+    display: block; 
     @extend %text-gradient;
   }
 
   //seperate extends to get prettier gradient on cite
   cite {
     @extend %text-gradient;
-  }
-
-  &:before {
-
-  line-height: 0.1;
-  color: $gradient-start;
-  content: open-quote;
-  margin-right: 0.1em;
-  vertical-align: -0.3em;
-  //To center text completly
-  margin-left: -37px;
+    font-size: 25px;
   }
 }
 

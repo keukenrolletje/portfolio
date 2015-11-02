@@ -50,14 +50,12 @@ a{
 blockquote{
 	p{
 		font-family: $simplifica;
-		@include vu(font-size, 7.8vw, $screen-lg-min);
 		text-transform: uppercase;
 		font-style: italic;
 	}
 
 	cite{
-		font-family: $helvetica-n;
-		font-size: 24px;
+		font-family: $open-sans;
 		font-style: normal;
 		text-transform: uppercase;
 	}

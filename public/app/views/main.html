@@ -64,9 +64,9 @@
 	<div class="white-section" ng-controller="quotesCtrl">
 		<section class="container">
 			<blockquote>
-				<p>{{quote}}</p><br>
+				<p>{{quote.quote}}</p><br>
 				<!--cite handwritten svg? -->
-				<cite>- Steve Jobs -</cite>
+				<cite ng-if="quote.author">- {{quote.author}} -</cite>
 			</blockquote>
 		</section>
 	</div>

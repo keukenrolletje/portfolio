@@ -1,5 +1,31 @@
 [
-	"quote1",
-	"quote2",
-	"quote3"
+	{
+		"quote": "Be fearless in the pursuit of what sets your soul on fire.",
+		"author": ""
+	},
+	{
+		"quote": "The expert in anything was once a beginner.",
+		"author": ""
+	},
+	{
+		"quote": "If it doesn't challenge you, it won't change you.",
+		"author": ""
+	},
+	{
+		"quote": "Don't wait for opportunity. Create it.",
+		"author": ""
+	},
+	{
+		"quote": "Do what you love.",
+		"author": ""
+	},
+	{
+		"quote": "Design is how it works.",
+		"author": "Steve jobs"
+	},
+		{
+		"quote": "It is a beautiful thing when a career and a passion come together.",
+		"author": ""
+	}
+	
 ]
