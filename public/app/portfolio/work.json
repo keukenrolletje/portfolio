@@ -1,6 +1,7 @@
 [
       {
         "id": "Vggie",
+        "imgSmall": "images/vggie.jpg",
         "imageUrl": "images/vggie.jpg",
         "name": "Vggie",
         "description": "html, css3, javascript, php, laravel, photoshop, SQL",
@@ -9,6 +10,7 @@
       },
       {
         "id": "Oleaz",
+        "imgSmall" : "images/oleazm.jpg",
         "imageUrl": "images/oleaz.jpg",
         "name": "O'leaz",
         "description": "html, Bootstrap, Sass, jQuery, responsive",
@@ -17,6 +19,7 @@
       },
       {
         "id": "StartupBasecamp",
+        "imgSmall" : "images/sbm.jpg",
         "imageUrl": "images/sb.jpg",
         "name": "Startup Basecamp",
         "description": "html, Bootstrap, css, responsive",
