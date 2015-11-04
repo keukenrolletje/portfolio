@@ -65,10 +65,6 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
-      /*postcss: {
-        files: '.tmp/styles/main.css',
-         tasks: ['postcss']
-      }*/
     },
 
     // The actual grunt server settings
@@ -157,47 +153,6 @@ module.exports = function (grunt) {
       server: '.tmp'
     },
 
-    // Add vendor prefixed styles
-   /* autoprefixer: {
-      options: {
-        browsers: ['last 1 version']
-      },
-      server: {
-        options: {
-          map: true,
-        },
-        files: [{
-          expand: true,
-          cwd: '.tmp/styles/',
-          src: '{,*//*}*.css',
-          dest: '.tmp/styles/'
-        }]
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/styles/',
-          src: '{,*//*}*.css',
-          dest: '.tmp/styles/'
-        }]
-      }
-    },*/
-
-    // Use postcss instead of autoprefixer
-    /*postcss: {
-      options: {
-        map: true,
-
-        processors: [
-          require('autoprefixer-core')({browsers: ['last 1 version']}),
-           require('postcss-scss')
-        ]
-      },
-      dist: {
-        src: '.tmp/styles/*.css'
-      }
-    },*/
-
     // Automatically inject Bower components into the app
     wiredep: {
       app: {
@@ -261,7 +216,6 @@ module.exports = function (grunt) {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -307,27 +261,46 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
+     cssmin: {
+       dist: {
+         files: {
+           '<%= yeoman.dist %>/styles/main.css': [
+             '.tmp/styles/{,*/}*.css'
+           ]
+         }
+       }
+     },
+     uglify: {
+       dist: {
+         files: {
+           '<%= yeoman.dist %>/scripts/scripts.js': [
+             '<%= yeoman.app %>/scripts/*.js'
+           ],
+           '<%= yeoman.dist %>/plugins/jquery.visible.js': [
+             '<%= yeoman.app %>/plugins/jquery.visible.js'
+           ]
+         }
+       }
+     },
+     concat: {
+       dist: {
+        files:
+          { '<%= yeoman.dist %>/scripts/scripts.js':
+             [ '.tmp/scripts/**/*.js',
+               'app/scripts/**/*.js' ] } },
+      'dist/scripts/scripts.js':
+       [ 'app/scripts/app.js',
+         'app/scripts/controllers/main.js',
+         'app/scripts/controllers/about.js',
+         'app/scripts/controllers/work.js',
+         'app/scripts/controllers/workdetail.js',
+         'app/scripts/controllers/contact.js',
+         'app/scripts/controllers/quotes.js',
+         'app/scripts/filters.js',
+         'app/scripts/services.js',
+         'app/scripts/animations.js' ]
+       
+     },
 
     imagemin: {
       dist: {
@@ -361,10 +334,35 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= yeoman.dist %>',
+          cwd: '<%= yeoman.app %>/views',
           src: ['*.html'],
-          dest: '<%= yeoman.dist %>'
+          dest: '<%= yeoman.dist %>/views'
         }]
+      }
+    },
+
+    minjson: {
+      dist: {
+        files: {
+          // Concat/minify one.json and all json files within the data folder
+          // If more than one json file is matched, json will be wrapped in brackets []
+          '<%= yeoman.dist %>/portfolio/work.json': ['<%= yeoman.app %>/portfolio/work.json'],
+          '<%= yeoman.dist %>/portfolio/blog.json': ['<%= yeoman.app %>/portfolio/blog.json'],
+          '<%= yeoman.dist %>/portfolio/canvas.json': ['<%= yeoman.app %>/portfolio/canvas.json'],
+          '<%= yeoman.dist %>/portfolio/cat.json': ['<%= yeoman.app %>/portfolio/cat.json'],
+          '<%= yeoman.dist %>/portfolio/dropdown.json': ['<%= yeoman.app %>/portfolio/dropdown.json'],
+          '<%= yeoman.dist %>/portfolio/hover.json': ['<%= yeoman.app %>/portfolio/hover.json'],
+          '<%= yeoman.dist %>/portfolio/kaoani.json': ['<%= yeoman.app %>/portfolio/kaoani.json'],
+          '<%= yeoman.dist %>/portfolio/oleaz.json': ['<%= yeoman.app %>/portfolio/oleaz.json'],
+          '<%= yeoman.dist %>/portfolio/picker.json': ['<%= yeoman.app %>/portfolio/picker.json'],
+          '<%= yeoman.dist %>/portfolio/portfolio.json': ['<%= yeoman.app %>/portfolio/portfolio.json'],
+          '<%= yeoman.dist %>/portfolio/quotes.json': ['<%= yeoman.app %>/portfolio/quotes.json'],
+          '<%= yeoman.dist %>/portfolio/rain.json': ['<%= yeoman.app %>/portfolio/rain.json'],
+          '<%= yeoman.dist %>/portfolio/StartupBasecamp.json': ['<%= yeoman.app %>/portfolio/StartupBasecamp.json'],
+          '<%= yeoman.dist %>/portfolio/vggie.json': ['<%= yeoman.app %>/portfolio/vggie.json'],
+          '<%= yeoman.dist %>/portfolio/WDOC.json': ['<%= yeoman.app %>/portfolio/WDOC.json'],
+          '<%= yeoman.dist %>/portfolio/name.json': ['<%= yeoman.app %>/portfolio/name.json']
+        }
       }
     },
 
@@ -414,7 +412,8 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'fonts/{,*/}*.*',
+            'old_site/{,*/}*.*'
           ]
         }, {
           expand: true,
@@ -424,7 +423,10 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           cwd: '.',
-          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+          src: ['bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+          'bower_components/angular-bootstrap/ui-bootstrap.min.js',
+          'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
+          'bower_components/angular-aria/angular-aria.min.js'],
           dest: '<%= yeoman.dist %>'
         }]
       },
@@ -503,7 +505,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'minjson'
   ]);
 
   grunt.registerTask('default', [
