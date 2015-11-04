@@ -9,21 +9,21 @@
 
 		<div class="work-filter">
 				<div class="row">		
-					<a class="col-xs-4 tags" ng-repeat="tag in tags" tabindex="0" role="button">
-						<div ng-click="filters.tag = tag.tag; itemClicked($index)" ng-keypress="filters.tag = tag.tag; itemClicked($index)" ng-class="{ 'active': $index == selectedIndex }" ><span></span>{{tag.name}}</div>
+					<a class="col-xs-4 tags" ng-repeat="tag in ::tags" tabindex="0" role="button">
+						<div ng-click="filters.tag = tag.tag; itemClicked($index)" ng-keypress="filters.tag = tag.tag; itemClicked($index)" ng-class="{ 'active': $index == selectedIndex }" ><span></span>{{::tag.name}}</div>
 					</a>
 				</div>
 		</div>
 
 		<section ng-if="exp =='experiment'" ng-repeat="work in works | filter:isdef" class="tag-animation">
-			<div class="work module" ng-class="{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
-				<img ng-src="{{work.imageUrl}}" alt="{{work.name}}">
-				<a href="#/portfolio/{{work.id}}">
+			<div class="work module" ng-class="::{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
+				<img ng-src="{{::work.imageUrl}}" alt="{{::work.name}}">
+				<a href="#/portfolio/{{::work.id}}">
 					<div class="description-card"  >
 						<div class="description-inner">
-							<h4>{{work.name}}</h4>
+							<h4>{{::work.name}}</h4>
 							<hr>
-							<p>{{work.description}}</p>
+							<p>{{::work.description}}</p>
 						</div>
 					</div>
 				</a>	
@@ -31,14 +31,14 @@
 		</section>
 
 			<section ng-if="exp ==''" ng-repeat="work in works | filter:filters" class="tag-animation">
-			<div class="work module" ng-class="{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
-				<img ng-src="{{work.imageUrl}}" alt="{{work.name}}">
-				<a href="#/portfolio/{{work.id}}">
+			<div class="work module" ng-class="::{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
+				<img ng-src="{{::work.imageUrl}}" alt="{{::work.name}}">
+				<a href="#/portfolio/{{::work.id}}">
 					<div class="description-card">
 						<div class="description-inner">
-							<h4>{{work.name}}</h4>
+							<h4>{{::work.name}}</h4>
 							<hr>
-							<p>{{work.description}}</p>
+							<p>{{::work.description}}</p>
 						</div>
 					</div>
 				</a>	
