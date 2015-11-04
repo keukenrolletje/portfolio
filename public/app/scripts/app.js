@@ -12,16 +12,11 @@
 angular
   .module('publicApp', [
     'ngAnimate',
-    'ngCookies',
-    'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngTouch',
     'ngAria',
+    'ngSanitize',
     'ui.bootstrap', 
-    'appAnimations', 
-    'duParallax',
-    'duScroll'
+    'appAnimations'
       ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -62,7 +57,6 @@ angular
   })
   .run(['$location', '$rootScope', '$routeParams', function($location, $rootScope, $routeParams){
     $rootScope.$on('$routeChangeSuccess', function(event, current){
-      console.log(current.$$route.controller);
       //$routeParams.id
       if(current.$$route.controller === 'workdetailCtrl'){
         $rootScope.title = $routeParams.id + ' ' + current.$$route.title;
@@ -105,7 +99,6 @@ angular
 
        //check for ie and apply ie specific styles
         var ua1 = window.navigator.userAgent;
-        console.log(navigator.sayswho);
 
         if (ua1.indexOf('Trident') > 0) {
           angular.element('body').addClass('ie');

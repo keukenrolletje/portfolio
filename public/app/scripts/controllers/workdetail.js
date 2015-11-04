@@ -10,9 +10,6 @@ App.controller('workdetailCtrl', ['$rootScope', '$scope', '$routeParams', '$http
          $rootScope.exp = $scope.work.tag;
     });
 
-    
-    
-
   }])
 .directive('html', [ function () {
   return {
@@ -23,4 +20,3 @@ App.controller('workdetailCtrl', ['$rootScope', '$scope', '$routeParams', '$http
   };
 }])
 ;
-/*using directive to get html and script from json file. Html works with html-bind but script didn't work.*/

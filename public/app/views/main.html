@@ -1,7 +1,7 @@
 
 <header ng-controller="MainCtrl" class="main-header">
-  <h1 data-text="Joke Gysen">Joke Gysen</h1>
-  <h2 data-text="Front-end developer">Front-end developer</h2>
+  <h1>Joke Gysen</h1>
+  <h2>Front-end developer</h2>
 </header>
 <main class="main" id="main">
 	<div class="smoky-section">
@@ -39,28 +39,28 @@
 					<figure class="img-2 figure-small">
 						<span class="sr-only">{{::grid[1].name}} - {{::grid[1].description}}</span>
 						<img  ng-src="{{::grid[1].imgSmall}}" class="grid" alt="Oleaz detail page">
-
+						
 						<figcaption tabindex="0" role="button" aria-label="Oleaz detail page">
-						<div class="company-heading">
+							<div class="company-heading">
 								<h6 class="line-small-black">{{::grid[1].name}}</h6>
 								<p>{{::grid[1].description}}</p>
-						</div>
-					</figcaption>
-				</figure>
+							</div>
+						</figcaption>
+					</figure>
 				</a>
 				<a  href="{{::grid[2].website}}">
 					<figure class="img-3 figure-small">
 						<span class="sr-only">{{::grid[2].name}} - {{::grid[2].description}}</span>
 						<img  ng-src="{{::grid[2].imgSmall}}" class="grid" alt="Startup Basecamp detail page">
-
+						
 						<figcaption tabindex="0" role="button" aria-label="Startup Basecamp detail page">
-						<div class="company-heading">
+							<div class="company-heading">
 								<h6 class="line-small-black">{{::grid[2].name}}</h6>
 								<p>{{::grid[2].description}}</p>
-						</div>
-					</figcaption>
-				</figure>
-			</a>
+							</div>
+						</figcaption>
+					</figure>
+				</a>
 			
 			<a href="#/portfolio"><div class="grid see-more" tabindex="0" role="button"><p>See all projects</p></div></a>
 		</div>

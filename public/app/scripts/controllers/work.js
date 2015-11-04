@@ -19,8 +19,7 @@ App.controller('workCtrl', ['$rootScope', '$scope', '$routeParams', '$http', fun
 
 	$http.get('portfolio/work.json')
        .then(function(res){
-          $scope.works = res.data;
-          //$scope.works = res.data.splice(0, 5);    
+          $scope.works = res.data; 
         });
 
        $scope.filters = { };
@@ -43,7 +42,6 @@ App.controller('workCtrl', ['$rootScope', '$scope', '$routeParams', '$http', fun
 		$scope.isdef = function(work){
 		    return (work.tag === 'experiment');
 		};
-		console.log($(window).width());
 
   }]).directive('reset', ['$document', function($document) {
   return {
