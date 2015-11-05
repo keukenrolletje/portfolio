@@ -113,7 +113,8 @@ module.exports = function (grunt) {
       dist: {
         options: {
           open: true,
-          base: '<%= yeoman.dist %>'
+          base: '<%= yeoman.dist %>',
+          livereload: false
         }
       }
     },
@@ -426,7 +427,9 @@ module.exports = function (grunt) {
           src: ['bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
           'bower_components/angular-bootstrap/ui-bootstrap.min.js',
           'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
-          'bower_components/angular-aria/angular-aria.min.js'],
+          'bower_components/angular-sanitize/angular-sanitize.min.js',
+          'bower_components/angular-aria/angular-aria.min.js',
+          'analytics.js'],
           dest: '<%= yeoman.dist %>'
         }]
       },
