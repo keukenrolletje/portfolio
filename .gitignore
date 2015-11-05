@@ -1,6 +1,7 @@
-### Sass ###
-.sass-cache
+/dist
+/.tmp
+/.sass-cache
+/bower_components
+/node_modules
 *.css.map
-
-## Directory-based project format:
-.idea/
+/.idea
