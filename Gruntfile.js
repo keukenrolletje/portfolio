@@ -413,7 +413,8 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'images/{,*/}*.{webp}',
-            'fonts/{,*/}*.*'
+            'fonts/{,*/}*.*',
+            'analytics.js'
             //'old_site/{,*/}*.*'
           ]
         }, {
@@ -428,8 +429,7 @@ module.exports = function (grunt) {
           'bower_components/angular-bootstrap/ui-bootstrap.min.js',
           'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
           'bower_components/angular-sanitize/angular-sanitize.min.js',
-          'bower_components/angular-aria/angular-aria.min.js',
-          'analytics.js'],
+          'bower_components/angular-aria/angular-aria.min.js'],
           dest: '<%= yeoman.dist %>'
         }]
       },
