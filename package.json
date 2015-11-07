@@ -32,7 +32,8 @@
     "protractor": "^2.1.0",
     "grunt-postcss": "~0.6.0",
     "autoprefixer-core": "~5.2.1",
-    "grunt-minjson": "~0.3.0"
+    "grunt-minjson": "~0.3.0",
+    "coffee-script": "~1.10.0"
   },
   "engines": {
     "node": ">=0.10.0"
