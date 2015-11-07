@@ -1,11 +1,10 @@
-# public
+# portfolio
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.1.
+My personal portfolio. This site has been designed by me and built with AngularJS. The CSS is written in Sass. I use Grunt.js, a JavaScript task runner to automate repetitive tasks such as Sass compilation.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Run 'grunt build' for building and 'grunt serve' for preview. Run 'grunt serve:dist' for preview of the built website.
 
 ## Testing
 
