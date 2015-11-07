@@ -1,7 +1,7 @@
 'use strict';
 
 var App = angular.module('publicApp');
-App.controller('workdetailCtrl', ['$rootScope', '$scope', '$routeParams', '$http', '$rootElement', function ($rootScope, $scope, $routeParams, $http, $rootElement) {
+App.controller('workdetailCtrl', ['$rootScope', '$scope', '$routeParams', '$http',  function ($rootScope, $scope, $routeParams, $http) {
 
 
 	$http.get('portfolio/' + $routeParams.id + '.json')

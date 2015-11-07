@@ -4,7 +4,7 @@
 </header>
 
 <main class="main" id="main">
-	<div reset scrollLoad scroll ng-controller="workCtrl" class="portfolio">
+	<div reset scrollLoad ng-controller="workCtrl" class="portfolio">
 
 
 		<div class="work-filter">
@@ -15,8 +15,8 @@
 				</div>
 		</div>
 
-		<section ng-if="exp =='experiment'" ng-repeat="work in works | filter:isdef" class="tag-animation">
-			<div class="work module" ng-class="::{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
+		<section scroll class="module" ng-class-odd="'work-left'" ng-class-even="'work-right'" ng-if="exp =='experiment'" ng-repeat="work in works | filter:isdef" class="tag-animation">
+			<div class="work"  >
 				<img ng-src="{{::work.imageUrl}}" alt="{{::work.name}}">
 				<a href="#/portfolio/{{::work.id}}">
 					<div class="description-card"  >
@@ -30,8 +30,8 @@
 			</div>
 		</section>
 
-			<section ng-if="exp ==''" ng-repeat="work in works | filter:filters" class="tag-animation">
-			<div class="work module" ng-class="::{'already-visible':$first}" ng-class-odd="'work-left'" ng-class-even="'work-right'">
+			<section scroll class="module" ng-class-odd="'work-left'" ng-class-even="'work-right'" ng-if="exp ==''" ng-repeat="work in works | filter:filters" class="tag-animation">
+			<div class="work"  >
 				<img ng-src="{{::work.imageUrl}}" alt="{{::work.name}}">
 				<a href="#/portfolio/{{::work.id}}">
 					<div class="description-card">

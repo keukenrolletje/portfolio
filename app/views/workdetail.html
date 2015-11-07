@@ -14,10 +14,10 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div ng-if="work.tag =='work'" class="column">
-							<p ng-bind-html="::work.description">{{::work.description}}</p>
+							<p ng-bind-html="::work.description"></p>
 						</div>
 						<div ng-if="work.tag == 'experiment'" class="no-column">
-							<p ng-bind-html="::work.description">{{::work.description}}</p>
+							<p ng-bind-html="::work.description"></p>
 							<p class="what-service"><span class="title-service">What:</span>
 								{{::work.services.service}}</p>
 							<div class="col-md-12 website">
@@ -53,7 +53,7 @@
 						</div>
 						<div ng-if="::work.services.with" class="service-part">
 							<h5>With:</h5>
-							<p ng-bind-html="::work.services.with">{{::work.services.with}}</p>
+							<p ng-bind-html="::work.services.with"></p>
 							<hr>
 						</div>
 

@@ -72,7 +72,7 @@
 
 //Portfolio on scroll animation
 .come-in-left {
-  transform: translateX(-150px);
+  transform: translateX(-300px);
   animation: come-in 0.8s ease forwards;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .come-in-right {
-  transform: translateX(150px);
+  transform: translateX(300px);
   animation: come-in 0.8s ease forwards;
 }
 
@@ -114,10 +114,5 @@
 		to {
 			transform: translateX(0);
 		}
-	}
-
-	.already-visible  + div{
-		transform: translateX(0);
-		animation: none;
 	}
 }
