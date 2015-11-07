@@ -359,9 +359,9 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/portfolio/portfolio.json': ['<%= yeoman.app %>/portfolio/portfolio.json'],
           '<%= yeoman.dist %>/portfolio/quotes.json': ['<%= yeoman.app %>/portfolio/quotes.json'],
           '<%= yeoman.dist %>/portfolio/rain.json': ['<%= yeoman.app %>/portfolio/rain.json'],
-          '<%= yeoman.dist %>/portfolio/StartupBasecamp.json': ['<%= yeoman.app %>/portfolio/StartupBasecamp.json'],
+          '<%= yeoman.dist %>/portfolio/startupbasecamp.json': ['<%= yeoman.app %>/portfolio/startupbasecamp.json'],
           '<%= yeoman.dist %>/portfolio/vggie.json': ['<%= yeoman.app %>/portfolio/vggie.json'],
-          '<%= yeoman.dist %>/portfolio/WDOC.json': ['<%= yeoman.app %>/portfolio/WDOC.json'],
+          '<%= yeoman.dist %>/portfolio/wdoc.json': ['<%= yeoman.app %>/portfolio/wdoc.json'],
           '<%= yeoman.dist %>/portfolio/name.json': ['<%= yeoman.app %>/portfolio/name.json']
         }
       }

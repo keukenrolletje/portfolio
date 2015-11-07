@@ -1,6 +1,6 @@
 [
       {
-        "id": "Vggie",
+        "id": "vggie",
         "imgSmall": "images/vggie.jpg",
         "imageUrl": "images/vggie.jpg",
         "name": "Vggie",
@@ -9,7 +9,7 @@
         "tag": "work"
       },
       {
-        "id": "Oleaz",
+        "id": "oleaz",
         "imgSmall" : "images/oleazm.jpg",
         "imageUrl": "images/oleaz.jpg",
         "name": "O'leaz",
@@ -18,7 +18,7 @@
         "tag": "work"
       },
       {
-        "id": "StartupBasecamp",
+        "id": "startupbasecamp",
         "imgSmall" : "images/sbm.jpg",
         "imageUrl": "images/sb.jpg",
         "name": "Startup Basecamp",
@@ -27,7 +27,7 @@
         "tag": "work"
       },
       {
-        "id": "Blog",
+        "id": "blog",
         "imageUrl": "images/blog.jpg",
         "name": "Personal Blog",
         "description": "photoshop, html, css, php, codeigniter",
@@ -41,7 +41,7 @@
         "tag": "work"
       },
       {
-        "id": "WDOC",
+        "id": "wdoc",
         "imageUrl": "images/wdoc.jpg",
         "name": "WDOC",
         "description": "html, css3, jQuery, photoshop",
