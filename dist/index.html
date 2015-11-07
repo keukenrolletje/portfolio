@@ -1,0 +1,58 @@
+<!doctype html>
+<html ng-app="publicApp" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title ng-bind="title"></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="styles/main.ddc14777.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,800italic|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    
+    <base href="/">
+  </head>
+  <body outlineclick outlinepress iestyles>
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ng-include="'views/partials/navbar.html'"></div>
+
+    <div class="view-container">
+    <div ng-view="" class="view-frame"></div>
+    </div>
+
+
+    
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <!-- Place Analytics.js locally to increase performance and download script once every week (php)-->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','http://localhost:9000/analytics.js','ga');
+
+       ga('create', 'UA-43151539-1');
+       ga('send', 'pageview');
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="plugins/jquery.visible.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular-route.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+        
+
+        <script src="scripts/scripts.026d9002.js"></script>
+
+
+
+</body>
+</html>
