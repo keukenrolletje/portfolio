@@ -5,7 +5,7 @@
         "imageUrl": "images/vggie.jpg",
         "name": "Vggie",
         "description": "html, css3, javascript, php, laravel, photoshop, SQL",
-        "website" : "#/portfolio/Vggie",
+        "website" : "#/portfolio/vggie",
         "tag": "work"
       },
       {
@@ -14,7 +14,7 @@
         "imageUrl": "images/oleaz.jpg",
         "name": "O'leaz",
         "description": "html, Bootstrap, Sass, jQuery, responsive",
-        "website" : "#/portfolio/Oleaz",
+        "website" : "#/portfolio/oleaz",
         "tag": "work"
       },
       {
@@ -23,7 +23,7 @@
         "imageUrl": "images/sb.jpg",
         "name": "Startup Basecamp",
         "description": "html, Bootstrap, css, responsive",
-        "website" : "#/portfolio/StartupBasecamp",
+        "website" : "#/portfolio/startupbasecamp",
         "tag": "work"
       },
       {
