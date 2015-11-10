@@ -1,7 +1,7 @@
 'use strict';
 
 var App = angular.module('publicApp');
-App.controller('workCtrl', ['$rootScope', '$scope', '$routeParams', '$http', function ($rootScope, $scope, $routeParams, $http) {
+App.controller('workCtrl', ['$rootScope', '$scope', '$routeParams', '$http', 'messages', function ($rootScope, $scope, $routeParams, $http, messages) {
 	$scope.tags = [
 	{
 		"name" : "all",
@@ -30,27 +30,23 @@ App.controller('workCtrl', ['$rootScope', '$scope', '$routeParams', '$http', fun
 		    $scope.selectedIndex = $index;
 
 		  };
+		  $scope.filters = messages.tags;
 
-		if($rootScope.exp === 'experiment'){
-			$scope.exp = $rootScope.exp;
-			$scope.selectedIndex = 2;
-		}
-		else{
-			$scope.exp = '';
-		}
+		  if($scope.filters.tag === 'experiment'){
+		  	$scope.selectedIndex = 2;
+		  }
+		  else if($scope.filters.tag === 'work'){
+		  	$scope.selectedIndex = 1;
+		  }
 
-		$scope.isdef = function(work){
-		    return (work.tag === 'experiment');
-		};
-
-  }]).directive('reset', ['$document', function($document) {
+  }]).directive('reset', ['messages', function(messages) {
   return {
     restrict: 'A',
-    link: function($rootScope) {
-      $document.on('click', function() {
-        $rootScope.exp = '';
-        /*use apply to tell angular about the change and prevent clicking 2 times to change tag*/
-        $rootScope.$apply();
+    link: function(scope) {
+    	var el = angular.element('.work-filter');
+      el.on('click', function() {
+			messages.tags= scope.filters;
+			scope.$apply();
       });
     }
   };

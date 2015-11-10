@@ -65,6 +65,7 @@ angular
         $rootScope.title = current.$$route.title;
       }
     });
+
   }])
   .directive('randomnumber', function(){
     return {
@@ -120,4 +121,5 @@ angular
         angular.element('body').append('<style>:focus{outline:2px solid #56b4d3;} a:focus .description-card, a:active .description-card{outline:2px solid #56b4d3;}  a:focus figure, a:focus .see-more{outline-offset: 10px; border:2px solid #56b4d3;} </style>');
       });
     };
-});
+})
+;
