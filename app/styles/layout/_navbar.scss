@@ -67,7 +67,7 @@
 
 			    a{
 			    	color: $light;
-			    	padding: 5px 45px;
+			    	padding: 10px 42px 0px 45px;
 
 			    	&:hover, &:focus, &:active{
 			    		@include border-gradient($gradient-start, $gradient-stop, 1px);
