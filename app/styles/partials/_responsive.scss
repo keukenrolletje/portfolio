@@ -1,6 +1,189 @@
 @media (min-width: $screen-sm-min) {  }
-@media (min-width: $screen-md-min) {  }
-@media (min-width: $screen-lg-min) {  }
+
+
+@media (min-width: $screen-xl-min) { 
+	.menu .full-menu ul li{
+		@include vu(font-size, 6vw, $screen-xl-min);
+	}
+
+	.embed-nav{
+		height: 1400px !important;
+	}
+
+	.no-column .what-service{
+		@include vu(font-size, 1.5vw, $screen-xl-min);
+	}
+
+	.menu .menu-btn{
+	    width: 150px;
+    	height: 150px;
+
+    	.burger{
+    		width: 100px;
+    		height: 7px;
+    		margin-top: 40px;
+    	}
+
+    	.burger-middle{
+    		top: 28px;
+    	}
+
+    	.burger-bottom{
+    		top: 28px * 2;
+    	}
+	}
+
+	.smoky-section p{
+		@include vu(font-size, 1.5vw, $screen-xl-min);
+		line-height: initial;
+	}
+
+	.company-heading{
+		h4{
+			font-size: 100px;
+			font-size: 4.5vw;
+		}
+		h6{
+			font-size: 90px;
+			font-size: 3.5vw;
+		}
+		p{
+			@include vu(font-size, 1.5vw, $screen-xl-min);
+		}
+	}
+
+	.see-more p{
+		font-size: 100px !important;
+		font-size: 3.5vw !important;
+	}
+
+	.services{
+		h5{
+			@include vu(font-size, 1.5vw, $screen-xl-min);
+		}
+		p{
+			@include vu(font-size, 1.5vw, $screen-xl-min);
+		}
+	}
+
+	.website{
+		.ghost-button-white{
+			@include vu(font-size, 3vw, $screen-xl-min);
+		}
+	}
+
+	footer{
+		h5{
+			font-size: 47px;
+		}
+
+		p{
+			@include vu(font-size, 1.0vw, $screen-xl-min);
+		}
+
+		.copyright{
+			font-size: 30px;
+		}
+	}
+
+	.footer-icons i{
+		font-size: 47px;
+	}
+
+	.job-position{
+		left: 47% !important;
+		top: 70% !important;
+	}
+
+	.contact-container, .container{
+		max-width: 1700px;
+		width: initial !important;
+	}
+
+	blockquote{
+		p{
+			font-size: 2.5vw;
+		}
+	}
+
+	.contact-page{
+		h3{
+			@include vu(font-size, 2.5vw, $screen-xl-min);
+		}
+	}
+
+	.work-filter{
+		line-height: 130px;
+
+		a{
+			font-size: 45px;
+		}
+	}
+
+	.work{
+		overflow: hidden;
+	}
+
+	.work, .work-right img{
+		float: initial;
+	}
+
+	.work img{
+		width: 100%;
+		height: initial;
+	}
+
+	.work-left, .work-right{
+		float: left;
+		margin-left: 5px;
+		margin-bottom: 5px;
+		width: 33%;
+		height: 33%;
+		animation: none;
+		transform: translateX(0px);
+
+		&:hover{
+			img{
+				transform: scale(1.3) rotate(3deg);
+			}
+		}
+
+		img{
+			transition: transform 0.5s ease-out;
+			transform: scale(1) rotate(0deg);
+		}
+	}
+
+	.work-left .description-card, .work-right .description-card{
+		bottom: 0px;
+		left: 0px;
+		float: initial;
+    	position: absolute;
+    	width: 100%;
+    	@include vu(height, 15vw, $screen-xl-min);
+	}
+
+	.description-card h4{
+		@include vu(font-size, 3.3vw, $screen-xl-min);
+	}
+
+	.about .skills ul li{
+		@include vu(font-size, 1.5vw, $screen-xl-min);
+	}
+
+	.about, .about-website{
+		h5{
+			@include vu(font-size, 2vw, $screen-xl-min);
+		}
+	}
+ }
+
+ @media (min-width: $screen-lg-min) { 
+	.job-position{
+		left: 43%;
+		top: 68%;
+	}
+ }
 
 @media (max-width: $screen-md-max) { 
 	header{
@@ -32,6 +215,22 @@
 	.container-sm-2{
 		width: 70%;
 	}
+
+	.badge-job{
+		@include size(120px);
+
+		p{
+			font-size: 20px;
+			padding: 18px 10px 10px 7px;
+		}
+		span{
+			font-size: 32px;
+		}
+	}
+
+	.job-position{
+		left: 45%;
+	}
  }
 
  @media (max-width: $screen-sm-max) { 
@@ -57,10 +256,8 @@
  		}
  	}
 
- 	.job-position{
- 		right: 78.3%;
-    	top: 5vh;
-    	transform: rotate(-10deg); 
+ 	.badge-job{
+ 		display: none;
  	}
 
  	.about-website{
@@ -96,7 +293,11 @@
 	}
   }
 
- @media (max-width: $screen-xs-max) { 
+ @media (max-width: $screen-xs-max) {
+ 	.menu .full-menu ul li {
+ 		font-size: 3.5em;
+ 	}
+
 	header{
 		h1{
 			@include vu(font-size, 18vw, $screen-xs-max);
@@ -141,17 +342,91 @@
 		}
 	}
 
+	.main-grid{
+
+		figure{
+
+				h4, h6{
+						opacity: 1;
+						color: $darkest;
+
+						&:before, &:after{
+							display: none;
+						}
+				}
+
+
+				p{
+						opacity: 1;
+						margin-top: 2.5em;
+						font-size: 14px;
+				}
+
+				figcaption{
+					height: 100%;
+					position: relative;
+				}
+
+				figcaption::before{
+						opacity: 0.7;
+				}
+
+				.line-large-black{
+						&:before, &:after{
+							width: 10%;
+						}
+				}
+
+				.line-small-black{
+						&:before, &:after{
+							width: 20px;
+						}
+				}
+
+				.company-heading{
+					top: 30%;
+					height: initial;
+				}
+			}
+
+	}
+
 	.about{
+		.container{
+			width: initial;
+		}
+
 		.description{
-			height: 100vh;
+			height: initial;
 
 			p{
-				@include vu(font-size, 2.7vw, $screen-xs-max);
+				@include vu(font-size, 3.5vw, $screen-xs-max);
 			}
 
 			.large{
 				@include vu(font-size, 9vw, $screen-xs-max);
 				@include vu(line-height, 9vw, $screen-xs-max);
+			}
+		}
+
+		.skills{
+			margin: 0 auto;
+				text-align: center;
+			div + div ul{
+				margin-top: -10px;
+			}
+
+			h5{
+				margin-top: 15px;
+				margin-bottom: -10px;
+				text-align: center;
+			}
+
+			div{
+				ul{
+					display: inline-block;
+					text-align: left;
+				}
 			}
 		}
 	}
@@ -162,7 +437,7 @@
 
 	.about-website{
 		p{
-			@include vu(font-size, 3.1vw, $screen-xs-max);
+			@include vu(font-size, 3.9vw, $screen-xs-max);
 		}
 	}
 
@@ -211,7 +486,7 @@
 		margin: 15% 5%;
 
 		p{
-			@include vu(font-size, 4.3vw, $screen-xxs-min);
+			@include vu(font-size, 3.5vw, $screen-xxs-min);
 		}
 	}
 
@@ -256,10 +531,19 @@
 	}
 
 	.contact-page{
+		h3{
+		 	@include vu(font-size, 7vw, $screen-xxs-min);
+		 	text-align: center;
+    		margin-left: 22px;
+
+			&:before, &:after{
+				display: none;
+			}
+		}
 		.contact-container{
 			width: 90%;
 
-			p, .icons{
+			.icons{
 				text-align: center;
 			}
 
@@ -275,9 +559,41 @@
 
  }
 
+ @media all and (max-width: $screen-xs-max) and (min-width: $screen-xxs-max) {
+		.figure-small{
+			.company-heading{
+				top: 20%;
+			}
+
+			figcaption{
+				&:before{
+					opacity: 0.9;
+				}
+			}
+		}
+			h4{
+				font-size: 45px;
+			}
+
+		h6{
+			font-size: 25px;
+
+			& + p{
+				display: none;
+			}
+
+		}
+
+		.skills{
+			ul{
+				width: 30%;
+			}
+		}
+}
+
  @media (max-width: $screen-xxs-max) { 
  	h6, h4{
- 		@include vu(font-size, 10vw, $screen-xxs-max);
+ 		@include vu(font-size, 15vw, $screen-xxs-max);
  	}
 
 	header{
@@ -295,9 +611,18 @@
 
 		.main-heading{
 			h3{
-				@include vu(font-size, 8vw, $screen-xs-max);
+				@include vu(font-size, 13vw, $screen-xs-max);
+
+				&:before, &:after{
+					display: none;
+				}
 			}
+
 		}
+	}
+
+	.smoky-section p{
+		font-size: 22px;
 	}
 
 	.main-grid{
@@ -314,7 +639,7 @@
 
 			p{
 					opacity: 1;
-					margin-top: 1.5em;
+					margin-top: 2.5em;
 					font-size: 14px;
 			}
 
@@ -324,10 +649,7 @@
 			}
 
 			figcaption::before{
-					opacity: 0.7;
-					height: 50%;
-					top: 50%;
-					background-color: $darkest;
+					opacity: 0.5;
 			}
 
 			.line-large-black{
@@ -343,7 +665,8 @@
 			}
 
 			.company-heading{
-				top: 50%;
+				top: 40%;
+				height: initial;
 			}
 		}
 
@@ -357,9 +680,14 @@
 	}
 
 	.about{
+		.container{
+			width: initial;
+		}
+
 		.description{
+			height: initial;
 			p{
-				@include vu(font-size, 4vw, $screen-xxs-max);
+				@include vu(font-size, 5vw, $screen-xxs-max);
 			}
 
 			.large{
@@ -381,6 +709,15 @@
 
 			ul{
 				margin: 0;
+				width: 40%;
+			}
+
+			div + div ul{
+				margin-top: -5px;
+			}
+
+			div{
+				padding-left: 0px;
 			}
 		}
 
@@ -392,7 +729,8 @@
 
 	.about-website{
 			p{
-				@include vu(font-size, 4.4vw, $screen-xxs-max);
+				font-size: 18px;
+				font-size: 5.4vw;
 			}
 	}
 
@@ -503,6 +841,9 @@
 	.contact-page{
 		h3{
 			@include vu(font-size, 9vw, $screen-xxs-min);
+			margin-bottom: 50px;
+			margin-top: 0px;
+    		padding-top: 80px;
 		}
 
 		.line-before-after{
@@ -513,11 +854,22 @@
 
 		.contact-container{
 			width: 100%;
-			margin-left: -15px;
+
+			.info-text{
+				text-align: center;
+			}
+
+			.info-icon, .info-icon a {
+				font-size: 20px;
+			}
 
 			form{
 				.ghost-button{
 					@include vu(font-size, 9vw, $screen-xxs-min);
+				}
+
+				label{
+					font-size: 14px;
 				}
 			}
 
@@ -532,6 +884,19 @@
 	.no-column{
 		.ghost-button{
 			@include vu(font-size, 9vw, $screen-xxs-min);
+		}
+	}
+
+	.column{
+		@include prefix("column-count", "1", ms moz webkit o);
+	}
+
+	.work-detail .services{
+		h5{
+			@include vu(font-size, 5vw, $screen-xxs-min);
+		}
+		p{
+			@include vu(font-size, 3.5vw, $screen-xxs-min);
 		}
 	}
  }

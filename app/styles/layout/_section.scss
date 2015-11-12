@@ -41,6 +41,8 @@ section{
 }
 
 .about{
+	position: relative;
+
 	.description{
 		background-color: $darkest;
 		color: $light;
@@ -136,18 +138,6 @@ section{
 }
 
 .saf{
-	.about .description{
-		height: 100%;
-
-		p{
-			font-size: 19px;
-		}
-
-		.large{
-			font-size: 70px;
-		}
-	}
-
 	.top-about{
 		background-color: $darkest;
 	}
