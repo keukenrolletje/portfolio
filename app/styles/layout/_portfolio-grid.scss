@@ -83,6 +83,10 @@
 	    	width: 100%;
 	    	@include vu(height, 15vw, $screen-xl-min);
 		}
+
+	a{
+		width: 100%;
+	}
 }
 
 @media (max-width: $screen-xxs-min) {
