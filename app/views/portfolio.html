@@ -13,20 +13,23 @@
 				</div>
 		</div>
 
+		<div class="container-fluid container-portfolio">
 			<section scroll class="module" ng-class-odd="'work-left'" ng-class-even="'work-right'"  ng-repeat="work in works | filter:filters" class="tag-animation">
-			<div class="work"  >
-				<img ng-src="{{::work.imageUrl}}" alt="{{::work.name}}">
-				<a href="#/portfolio/{{::work.id}}">
-					<div class="description-card">
-						<div class="description-inner">
-							<h4>{{::work.name}}</h4>
-							<hr>
-							<p>{{::work.description}}</p>
+				<div class="work"  >
+					<img ng-src="{{::work.imageUrl}}" alt="{{::work.name}}">
+					<a href="#/portfolio/{{::work.id}}">
+						<div class="description-card">
+							<div class="description-inner">
+								<h4>{{::work.name}}</h4>
+								<hr>
+								<p>{{::work.description}}</p>
+							</div>
 						</div>
-					</div>
-				</a>	
-			</div>
-		</section>
+					</a>	
+				</div>
+			</section>
+		</div>
+
 	</div>
 </main>
 <div ng-include="'views/partials/footer.html'"></div>

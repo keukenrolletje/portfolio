@@ -101,48 +101,6 @@
 		}
 	}
 
-	.work{
-		overflow: hidden;
-	}
-
-	.work, .work-right img{
-		float: initial;
-	}
-
-	.work img{
-		width: 100%;
-		height: initial;
-	}
-
-	.work-left, .work-right{
-		float: left;
-		margin-left: 5px;
-		margin-bottom: 5px;
-		width: 33%;
-		height: 33%;
-		animation: none;
-		transform: translateX(0px);
-
-		&:hover{
-			img{
-				transform: scale(1.3) rotate(3deg);
-			}
-		}
-
-		img{
-			transition: transform 0.5s ease-out;
-			transform: scale(1) rotate(0deg);
-		}
-	}
-
-	.work-left .description-card, .work-right .description-card{
-		bottom: 0px;
-		left: 0px;
-		float: initial;
-    	position: absolute;
-    	width: 100%;
-    	@include vu(height, 15vw, $screen-xl-min);
-	}
 
 	.description-card h4{
 		@include vu(font-size, 3.3vw, $screen-xl-min);

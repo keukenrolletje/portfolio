@@ -1,10 +1,16 @@
+.container-portfolio{
+	padding: 0 5px;
+
+	width: 100%;
+}
+
 .work{
 	position: relative;
 	width: 100%;
+	overflow: hidden;
 
 	img{
-		@include size(50%, 50vw);
-		display: inline-block;
+		width: 100%;
 	}
 
 	.description-card{
@@ -48,52 +54,36 @@
 	}
 }
 
-.work-left{
-	img{
+.work-left, .work-right{
 		float: left;
-	}
+		padding-left: 2.5px;
+		padding-right: 2.5px;
+		margin-bottom: 5px;
+		width: 33.3%;
+		height: 33%;
+		animation: none;
+		transform: translateX(0px);
 
-	.description-card{
-		float: left;
-		left: -80px;
-	}
+		&:hover{
+			img{
+				transform: scale(1.3) rotate(3deg);
+			}
+		}
+
+		img{
+			transition: transform 0.5s ease-out;
+			transform: scale(1) rotate(0deg);
+		}
+
+		.description-card{
+			bottom: 0px;
+			left: 0px;
+			float: initial;
+	    	position: absolute;
+	    	width: 100%;
+	    	@include vu(height, 15vw, $screen-xl-min);
+		}
 }
-
-.work-right{
-	img{
-		float: right;
-	}
-
-	.description-card{
-		float: right;
-		right: -80px;
-	}
-}
-
-//Portfolio on scroll animation
-.come-in-left {
-  transform: translateX(-300px);
-  animation: come-in 0.8s ease forwards;
-}
-
-@keyframes come-in {
-  to { transform: translateX(0); }
-}
-
-.come-in-right {
-  transform: translateX(300px);
-  animation: come-in 0.8s ease forwards;
-}
-
-@keyframes come-in {
-  to { transform: translateX(0); }
-}
-
-.already-visible {
-  transform: translateY(0);
-  animation: none;
-}
-
 
 @media (max-width: $screen-xxs-min) {
 	.come-in-left, .come-in-right{
