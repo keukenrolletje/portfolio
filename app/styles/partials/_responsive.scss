@@ -679,7 +679,7 @@
 		}
 
 		h4{
-			@include vu(font-size, 7vw, $screen-xxs-max);
+			@include vu(font-size, 5.9vw, $screen-xxs-max);
 			font-weight: 700;
 		}
 
@@ -701,21 +701,12 @@
 		}
 	}
 
-	.work-left{
-		.description-card{
-			left: 0;
-		}
-	}
-
-	.work-right{
-		.description-card{
-			right: 0;
-		}
+	.work-left, .work-right{
+		width: 50%;
 	}
 
 	.work{
 		.description-card{
-			height: 50vw;
 			margin-top: 0;
 			z-index: 0;
 
