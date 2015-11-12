@@ -14,25 +14,6 @@
 		@include vu(font-size, 1.5vw, $screen-xl-min);
 	}
 
-	.menu .menu-btn{
-	    width: 150px;
-    	height: 150px;
-
-    	.burger{
-    		width: 100px;
-    		height: 7px;
-    		margin-top: 40px;
-    	}
-
-    	.burger-middle{
-    		top: 28px;
-    	}
-
-    	.burger-bottom{
-    		top: 28px * 2;
-    	}
-	}
-
 	.smoky-section p{
 		@include vu(font-size, 1.5vw, $screen-xl-min);
 		line-height: initial;
