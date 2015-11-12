@@ -299,6 +299,7 @@ module.exports = function (grunt) {
          'app/scripts/controllers/quotes.js',
          'app/scripts/filters.js',
          'app/scripts/services.js',
+         'app/scripts/tagsservice.js',
          'app/scripts/animations.js' ]
        
      },
