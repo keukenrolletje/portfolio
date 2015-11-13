@@ -15,7 +15,7 @@
 
 		<div class="container-fluid container-portfolio">
 			<section scroll class="module" ng-class-odd="'work-left'" ng-class-even="'work-right'"  ng-repeat="work in works | filter:filters" class="tag-animation">
-				<a href="#/portfolio/{{::work.id}}">
+				<a href="/portfolio/{{::work.id}}">
 					<div class="work"  >
 						<img ng-src="{{::work.imageUrl}}" alt="{{::work.name}}">
 						

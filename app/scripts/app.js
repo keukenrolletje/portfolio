@@ -18,7 +18,7 @@ angular
     'ui.bootstrap', 
     'appAnimations'
       ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -52,7 +52,7 @@ angular
       })*/
       ;
 
-     // $locationProvider.html5Mode(true);
+      $locationProvider.html5Mode(true);
      // $location.Html5mode(true).hashbang("!");
   })
   .run(['$location', '$rootScope', '$routeParams', function($location, $rootScope, $routeParams){
