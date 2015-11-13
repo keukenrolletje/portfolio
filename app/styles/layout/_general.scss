@@ -75,6 +75,11 @@ body {
 	z-index: 0;
 }
 
+.error-border{
+	border: 1px dotted $gradient-start;
+	color: $gradient-start;
+}
+
 @media (max-width: 900px) {
   html { font-size: 15px; }
 }

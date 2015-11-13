@@ -37,6 +37,12 @@
 		}
 	}
 
+	input[type="submit"]{
+		color: $gradient-start;
+		border-bottom: none;
+		width: 100%;
+	}
+
 	&:hover{
 		background-color: $darkest;
 		box-shadow: none;
