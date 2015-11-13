@@ -711,8 +711,13 @@
 
 	.work{
 		.description-card{
+			@include vu(height, 20vw, $screen-xxs-max);
 			margin-top: 0;
 			z-index: 0;
+
+			h4{
+				@include vu(font-size, 7vw, $screen-xxs-max);
+			}
 
 			hr{
 				display: none;
