@@ -47,13 +47,13 @@ angular
         controller: 'contactCtrl',
         title: 'Contact Joke Gysen | Front-end developer'
       })
-      /*.otherwise({
+      .otherwise({
         redirectTo:'/'
-      })*/
+      })
       ;
 
-      $locationProvider.html5Mode(true);
-     // $location.Html5mode(true).hashbang("!");
+      //$locationProvider.html5Mode(true);
+      $locationProvider.html5Mode(true).hashPrefix('!');
   })
   .run(['$location', '$rootScope', '$routeParams', function($location, $rootScope, $routeParams){
     $rootScope.$on('$routeChangeSuccess', function(event, current){
