@@ -29,26 +29,31 @@
 						<div class="form-group">
 						  <label for="name" class="col-xs-3 control-label">Name</label>
 						  <div class="col-xs-9">
-						  	<input type="text" name="name" id="name" ng-model='nameField' ng-minlength="5" required=''>
+						  	<input type="text" name="name" id="name" ng-model='nameField' required=''>
 						  </div>
 						  <div ng-class="{ 'error-border' : contactform.name.$pristine}" ng-show='contactform.$submitted || contactform.name.$touched'>
-						  	<div ng-show="contactform.name.$error.required">Please enter your name!</div></div>
+						  	<div class='error-border' ng-show="contactform.name.$error.required">Please enter your name!</div>	
+						  </div>
 						</div>
 						<div class="form-group">
 						  <label for="email" class="col-xs-3 control-label">E-mail</label>
 						  <div class="col-xs-9">
-						  	<input type="email" name="email" id="email" ng-model='nameField' ng-minlength="5" required=''>
+						  	<input type="email" name="email" id="email" ng-model='emailField' required=''>
 						  </div>
 						  <div ng-class="{ 'error-border' : contactform.email.$pristine}" ng-show='contactform.$submitted || contactform.email.$touched'>
-						  	<div ng-show="contactform.email.$error.required">Please enter your email!</div></div>
+						  	<div class='error-border' ng-show="contactform.email.$error.required">Please enter your email!</div>
+						  </div>
+						  <div class="error-border" ng-show="contactform.$error.email">This is not a valid email!</div>
 						</div>
 						<div class="form-group">
 							<label for="message" class="col-xs-3 control-label">Message</label>
 							<div class="col-xs-9">
-						  		<textarea name="message" id="message" rows="4" ng-model='nameField' ng-minlength="5" required=''></textarea>
+						  		<textarea name="message" id="message" rows="4" ng-model='textField' ng-minlength="5" required=''></textarea>
 						  	</div>
 						  	<div ng-class="{ 'error-border' : contactform.message.$pristine}" ng-show='contactform.$submitted || contactform.message.$touched'>
-						  	<div ng-show="contactform.message.$error.required">Please enter a message!</div></div>
+						  	<div class='error-border' ng-show="contactform.message.$error.required">Please enter a message!</div>
+						  </div>
+						  <div class="error-border" ng-show="contactform.message.$error.minlength">Your message is too short!</div>
 						</div>
 						  <div class="ghost-button">
 							<input type="submit" value="Send!" />
